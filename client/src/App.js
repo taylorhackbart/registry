@@ -6,7 +6,9 @@ import Books from "./pages/Books";
 
 function App() {
   return (
+    
     <BrowserRouter>
+    <Nav />
     <div>
       <Route exact path ="/" component={Books}/>
     </div>
