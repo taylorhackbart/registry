@@ -8,25 +8,47 @@ import Footer from "../components/Footer"
 
 function Projects() {
     return (
-        <>
-        <a href="/" style={{display: "none"}} >Click Here </a>
-            <div className="container-fluid bg-3 text-center">
-                <h3 className="margin" style={{display: "none"}}> Here </h3><br />
-                <div className="row">
-                    <div className="col-sm-4 ">
-                        <h1>Holiday</h1>
-                    </div>
-                    <div className="col-sm-4 ">
-                    <h1>Holiday</h1>
-                    </div>
-                    <div className="col-sm-4 ">
-                    <h1>Holiday</h1>
-                    </div>
-                </div>
-            </div>
-            <Reviews />
-            <Footer/>
-        </>
+
+  <>
+  <a href="/create" className="container-fluid">
+   <div className="bg-3 text-center">
+     <h3 className="margin"></h3><br />
+         <div className="row">
+
+    <div className="card col-sm-4">
+     <img className="card-img-top" alt="..." />
+       <div className="card-body">
+         <h5 className="card-title">Card title</h5>
+        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      
+      </div>
+    </div>
+
+  <div className="card col-sm-4">
+     <img className="card-img-top" alt="..." />
+       <div className="card-body">
+         <h5 className="card-title">Card title</h5>
+        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      
+    </div>
+  </div>
+
+  <div className="card col-sm-4">
+     <img className="card-img-top" alt="..." />
+       <div className="card-body">
+         <h5 className="card-title">Card title</h5>
+        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      
+    </div>
+  </div>
+        
+              </div>
+          </div>
+        </a>
+
+        <Reviews />
+   </>
+        
     )
 };
 
