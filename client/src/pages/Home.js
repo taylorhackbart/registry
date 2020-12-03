@@ -7,7 +7,7 @@ import Reviews from "../components/Reviews/Index"
 function Projects() {
     return (
   <>
-  <a href="container-fluid">
+  <a href="container-fluid" className="">
    <div className="bg-3 text-center">
      <h3 className="margin"></h3><br />
          <div className="row">
