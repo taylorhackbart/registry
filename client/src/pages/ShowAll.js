@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { List, ListItem } from "../components/List";
 import API from "../utils/API";
+import Footer from "../components/Footer"
 
 const ShowAll = (props)=>{
     const [users, setUsers] = useState([])
@@ -44,7 +45,9 @@ const ShowAll = (props)=>{
                     </>
                 ))}
             </List>
+            <Footer/>
         </div>
+       
     )
 }
 

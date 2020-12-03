@@ -1,6 +1,8 @@
 import React from 'react';
 import './home.css';
 import Reviews from "../components/Reviews/Index"
+import Footer from "../components/Footer"
+
 
 
 
@@ -22,8 +24,8 @@ function Projects() {
                     </div>
                 </div>
             </div>
-
             <Reviews />
+            <Footer/>
         </>
     )
 };

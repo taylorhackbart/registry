@@ -1,10 +1,10 @@
-import react from "react";
+import React from "react";
 import "./style.css";
 
 function Footer() {
   return (
     <footer className="footer">
-      <span> &copy; Copywrite - Giftr 2020</span>
+      <span> &copy; Giftr Copywrite 2020</span>
     </footer>
   );
 }
