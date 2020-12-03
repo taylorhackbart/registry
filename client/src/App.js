@@ -3,6 +3,7 @@ import Nav from "./components/Nav";
 import { BrowserRouter, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import ShowAll from "./pages/ShowAll";
+import Create from "./pages/Create"
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
     <div>
       <Route exact path ="/" component={Home}/>
       <Route exact path ="/showall" component={ShowAll}/>
+      <Route exact path = "/create" component={Create} />
     </div>
     </BrowserRouter>
   );
