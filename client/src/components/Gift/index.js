@@ -1,9 +1,9 @@
-import React from "react";
+import React, {useState} from "react";
 import API from "../../utils/API"
-import {Input,TextArea,FormBtn} from "../Form"
+import {Input,FormBtn} from "../Form"
 
 const Gift = (props)=>{
-    const [books, setBooks] = useState([])
+    // const [gifts, setGift] = useState([])
     const [formObject, setFormObject] = useState({})
 
     const handleInputChange=(event)=>{
@@ -13,15 +13,14 @@ const Gift = (props)=>{
     
     const handleFormSubmit=(event)=>{
         event.preventDefault();
-        if (formObject.title && formObject.author) {
           API.saveBook({
             title: formObject.title,
             image: formObject.image,
             link: formObject.link
           })
-            .then(res => loadBooks())
-            .catch(err => console.log(err));
-        }
+        //     .then(res => loadBooks())
+        //     .catch(err => console.log(err));
+        
     };
 
     return(
@@ -52,4 +51,4 @@ const Gift = (props)=>{
     )
 }
 
-export default Gift
+export default Gift;
