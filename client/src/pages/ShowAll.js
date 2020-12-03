@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { List, ListItem } from "../components/List";
 import API from "../utils/API";
+import { Link } from "react-router-dom";
 
 const ShowAll = (props)=>{
     const [users, setUsers] = useState([])
@@ -29,10 +30,12 @@ const ShowAll = (props)=>{
             <ul>
                 <div>
                     {users.map(user => (
-                        <div onClick={grabUser} key={user._id}>
-                        <li>
-                            {user.name}
-                        </li>
+                        <div key={user._id}> 
+                        <Link to ={ "/showall/" + user._id} >
+                        <strong>
+                        {user.name} 
+                        </strong> 
+                        </Link>
                         <ul>
                             {user.giftList.map(gift =>(
                                 <>

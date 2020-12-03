@@ -4,11 +4,11 @@ import { Col, Row, Container } from "../components/Grid";
 import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
 import { List, ListItem } from "../components/List";
+import Gift from "../components/Gift"
 
 const Detail = () => {
   const [users, setUser] = useState({});
   const params = useParams();
-  console.log(params);
 
   useEffect(() => {
     API.getUser(params.id)
@@ -20,19 +20,19 @@ const Detail = () => {
     <Container fluid>
       <Row>
         <Col size="md-12">
-          <List>
-                <ListItem>{users.name}</ListItem>
-                <List>
-                  {users.giftList.map((gift) => (
+          <ListItem>{users.name}</ListItem>
+          <Gift >
+               
+                 
                     <>
-                      <ListItem>{gift.title}</ListItem>
-                      <ListItem>{gift.image}</ListItem>
-                      <ListItem>{gift.link}</ListItem>
+                      <p key={users._id}>{ users.title}</p>
+                      <p>{users.image}</p>
+                      <p>{users.link}</p>
                     </>
-                  ))}
-                </List>
+              
+             
             
-          </List>
+          </Gift>
         </Col>
       </Row>
     </Container>
