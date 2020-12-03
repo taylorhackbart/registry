@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import API from "../../utils/API"
 import {Input,TextArea,FormBtn} from "../Form"
 
@@ -19,8 +19,8 @@ const Gift = (props)=>{
             image: formObject.image,
             link: formObject.link
           })
-            .then(res => loadBooks())
-            .catch(err => console.log(err));
+        //     .then(res => loadBooks())
+        //     .catch(err => console.log(err));
         }
     };
 
@@ -52,4 +52,4 @@ const Gift = (props)=>{
     )
 }
 
-export default Gift
+export default Gift;
