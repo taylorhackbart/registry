@@ -18,32 +18,40 @@ const ShowAll = (props)=>{
         }).catch(err => console.log(err))
     }
 
+    const grabUser = (e)=>{
+        console.log(e.target)
+        // API.getUser(id)
+    }
+
+
     return(
         <div>
-            <List>
-                {users.map(user => (
-                    <>
-                    <ListItem>
-                        {user.name}
-                    </ListItem>
-                    <List>
-                        {user.giftList.map(gift =>(
-                            <>
-                            <ListItem>
-                                {gift.title}
-                            </ListItem>
-                            <ListItem>
-                                {gift.image}
-                            </ListItem>
-                            <ListItem>
-                                {gift.link}
-                            </ListItem>
-                            </>
-                        ))}
-                    </List>
-                    </>
-                ))}
-            </List>
+            <ul>
+                <div>
+                    {users.map(user => (
+                        <div onClick={grabUser} key={user._id}>
+                        <li>
+                            {user.name}
+                        </li>
+                        <ul>
+                            {user.giftList.map(gift =>(
+                                <>
+                                <li>
+                                    {gift.title}
+                                </li>
+                                <li>
+                                    <img src={gift.image} width="80px" height="80px"/>
+                                </li>
+                                <li>
+                                    {gift.link}
+                                </li>
+                                </>
+                            ))}
+                        </ul>
+                        </div>
+                    ))}
+                </div>
+            </ul>
         </div>
     )
 }
