@@ -1,7 +1,7 @@
 import React from "react";
 import Nav from "./components/Nav";
 import { BrowserRouter, Route } from "react-router-dom";
-import Books from "./pages/Books";
+import Home from "./pages/Home";
 
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
     <BrowserRouter>
     <Nav />
     <div>
-      <Route exact path ="/" component={Books}/>
+      <Route exact path ="/" component={Home}/>
     </div>
     </BrowserRouter>
   );
