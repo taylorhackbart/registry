@@ -19,6 +19,7 @@ function App() {
       <Route exact path = "/showall/:id" component = {Detail} />
     </div>
     </BrowserRouter>
+
   );
 }
 

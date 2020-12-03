@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import API from "../utils/API";
+import Footer from "../components/Footer"
 import { Link } from "react-router-dom";
 
 const ShowAll = (props)=>{
