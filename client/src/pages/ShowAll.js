@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { List, ListItem } from "../components/List";
 import API from "../utils/API";
 import Footer from "../components/Footer"
+import { Link } from "react-router-dom";
 
 const ShowAll = (props)=>{
     const [users, setUsers] = useState([])
@@ -19,35 +19,38 @@ const ShowAll = (props)=>{
         }).catch(err => console.log(err))
     }
 
+
     return(
         <div>
-            <List>
-                {users.map(user => (
-                    <>
-                    <ListItem>
-                        {user.name}
-                    </ListItem>
-                    <List>
-                        {user.giftList.map(gift =>(
-                            <>
-                            <ListItem>
-                                {gift.title}
-                            </ListItem>
-                            <ListItem>
-                                {gift.image}
-                            </ListItem>
-                            <ListItem>
-                                {gift.link}
-                            </ListItem>
-                            </>
-                        ))}
-                    </List>
-                    </>
-                ))}
-            </List>
-            <Footer/>
+            <ul>
+                <div>
+                    {users.map(user => (
+                        <div key={user._id}> 
+                        <Link to ={ "/showall/" + user._id} >
+                        <strong>
+                        {user.name} 
+                        </strong> 
+                        </Link>
+                        <ul>
+                            {user.giftList.map(gift =>(
+                                <>
+                                <li>
+                                    {gift.title}
+                                </li>
+                                <li>
+                                    <img src={gift.image} width="80px" height="80px" alt="gift" />
+                                </li>
+                                <li>
+                                    {gift.link}
+                                </li>
+                                </>
+                            ))}
+                        </ul>
+                        </div>
+                    ))}
+                </div>
+            </ul>
         </div>
-       
     )
 }
 
