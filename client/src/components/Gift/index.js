@@ -3,7 +3,7 @@ import API from "../../utils/API"
 import {Input,TextArea,FormBtn} from "../Form"
 
 const Gift = (props)=>{
-    const [gift, setGift] = useState([])
+    const [gifts, setGift] = useState([])
     const [formObject, setFormObject] = useState({})
 
     const handleInputChange=(event)=>{
