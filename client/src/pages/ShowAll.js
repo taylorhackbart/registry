@@ -13,7 +13,7 @@ const ShowAll = (props)=>{
     },[])
 
     const loadUsers = ()=>{
-        API.getUsers().then(res => {
+        API.findAllByName().then(res => {
             console.log(res.data)
             setUsers(res.data)
             console.log(users)
