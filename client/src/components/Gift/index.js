@@ -1,9 +1,9 @@
 import React, {useState} from "react";
 import API from "../../utils/API"
-import {Input,TextArea,FormBtn} from "../Form"
+import {Input,FormBtn} from "../Form"
 
 const Gift = (props)=>{
-    const [gift, setGift] = useState([])
+
     const [formObject, setFormObject] = useState({})
 
     const handleInputChange=(event)=>{
