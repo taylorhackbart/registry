@@ -8,7 +8,7 @@ mongoose.connect(
   "mongodb://localhost/giftr"
 );
 
-const bookSeed = [
+const userSeed = [
   {
     name: "Tay",
     giftList: [
@@ -71,9 +71,9 @@ const bookSeed = [
   }
 ];
 
-db.Book
+db.User
   .remove({})
-  .then(() => db.Book.collection.insertMany(bookSeed))
+  .then(() => db.User.collection.insertMany(userSeed))
   .then(data => {
     console.log(data.result.n + " records inserted!");
     process.exit(0);
