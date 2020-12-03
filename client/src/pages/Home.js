@@ -1,11 +1,14 @@
 import React from 'react';
 import './home.css';
 import Reviews from "../components/Reviews/Index"
+import Footer from "../components/Footer"
+
 
 
 
 function Projects() {
     return (
+
   <>
   <a href="/create" className="container-fluid">
    <div className="bg-3 text-center">

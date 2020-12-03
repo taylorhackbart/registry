@@ -6,7 +6,7 @@ const reviews = [
     image:
       'https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883334/person-1_rfzshl.jpg',
     text:
-      "I'm baby meggings twee health goth +1. Bicycle rights tumeric chartreuse before they sold out chambray pop-up. Shaman humblebrag pickled coloring book salvia hoodie, cold-pressed four dollar toast everyday carry",
+      "It's such an easy gatway to use and its easy to work. I have told my friends about this site because it's such an amazing website and it its a great tool for the holidays to find gifts for your family.",
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ const reviews = [
     image:
       'https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883409/person-2_np9x5l.jpg',
     text:
-      'Helvetica artisan kinfolk thundercats lumbersexual blue bottle. Disrupt glossier gastropub deep v vice franzen hell of brooklyn twee enamel pin fashion axe.photo booth jean shorts artisan narwhal.',
+      'I like the fact that is it one of the most stable, secure membership sites. Its used by tons of members becasue of its sturdiness.It is also safe and secure which is what I like.',
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ const reviews = [
     image:
       'https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883417/person-3_ipa0mj.jpg',
     text:
-      'Sriracha literally flexitarian irony, vape marfa unicorn. Glossier tattooed 8-bit, fixie waistcoat offal activated charcoal slow-carb marfa hell of pabst raclette post-ironic jianbing swag.',
+      'Its a powerful and realively simple membership wishlist membership site. It gives us exactly what we need and its easy to search.',
   },
   {
     id: 4,
@@ -33,7 +33,7 @@ const reviews = [
     image:
       'https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883423/person-4_t9nxjt.jpg',
     text:
-      'Edison bulb put a bird on it humblebrag, marfa pok pok heirloom fashion axe cray stumptown venmo actually seitan. VHS farm-to-table schlitz, edison bulb pop-up 3 wolf moon tote bag street art shabby chic. ',
+      'It was perfect timing for me, so I snapped up the deal. Giftr has a lot of great features including there content and ability to save searches.',
   },
 ];
 
