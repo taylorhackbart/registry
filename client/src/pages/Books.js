@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
+import Footer from "../components/Footer"
 
 function Books() {
   const [books, setBooks] = useState([])
@@ -101,8 +102,9 @@ function Books() {
           </Col>
         </Row>
       </Container>
-     
+    
     );
+    <Footer/>
   }
 
 

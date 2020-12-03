@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { List, ListItem } from "../components/List";
 import API from "../utils/API";
+import Footer from "../components/Footer"
 import { Link } from "react-router-dom";
 
 const ShowAll = (props)=>{
@@ -17,11 +17,6 @@ const ShowAll = (props)=>{
             setUsers(res.data)
             console.log(users)
         }).catch(err => console.log(err))
-    }
-
-    const grabUser = (e)=>{
-        console.log(e.target)
-        // API.getUser(id)
     }
 
 
@@ -43,7 +38,7 @@ const ShowAll = (props)=>{
                                     {gift.title}
                                 </li>
                                 <li>
-                                    <img src={gift.image} width="80px" height="80px"/>
+                                    <img src={gift.image} width="80px" height="80px" alt="gift" />
                                 </li>
                                 <li>
                                     {gift.link}
