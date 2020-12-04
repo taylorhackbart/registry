@@ -37,6 +37,7 @@ const Detail = () => {
        
         </Col>
       </Row>
+      <Footer />
     </Container>
   );
   <Footer/>

@@ -3,6 +3,7 @@ import API from "../utils/API";
 import Footer from "../components/Footer"
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer"
+import {  List, ListItem } from "../components/List";
 
 const ShowAll = (props)=>{
     const [users, setUsers] = useState([])
@@ -34,23 +35,24 @@ const ShowAll = (props)=>{
                         </Link>
                         <ul>
                             {user.giftList.map(gift =>(
-                                <>
-                                <li>
+                                <ListItem key={gift.title}>
+                                <List>
                                     {gift.title}
-                                </li>
-                                <li>
+                                </List>
+                                <List>
                                     <img src={gift.image} width="80px" height="80px" alt="gift" />
-                                </li>
-                                <li>
+                                </List>
+                                <List>
                                     {gift.link}
-                                </li>
-                                </>
+                                </List>
+                                </ListItem>
                             ))}
                         </ul>
                         </div>
                     ))}
                 </div>
             </ul>
+            <Footer />
         </div>
     )
 }

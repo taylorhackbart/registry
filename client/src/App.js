@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import Nav from "./components/Nav";
 import { BrowserRouter, Route } from "react-router-dom";
 import Home from "./pages/Home";
@@ -8,10 +8,13 @@ import Detail from "./pages/Detail"
 
 
 function App() {
+  const [searched, setSearched] = useState([])
+  console.log("searched", searched)
+
   return (
     
     <BrowserRouter>
-    <Nav />
+    <Nav setSearched={setSearched}/>
     <div>
       <Route exact path ="/" component={Home}/>
       <Route exact path ="/showall" component={ShowAll}/>
