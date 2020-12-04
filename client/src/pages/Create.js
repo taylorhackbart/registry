@@ -4,6 +4,7 @@ import {Input,FormBtn} from "../components/Form"
 // import Footer from "../components/Footer"
 
 const Create = () => {
+
   const [userName, setUserName] = useState([]);
   const [userObj, setUserObj] = useState({
     name: ""
@@ -27,6 +28,7 @@ const Create = () => {
       throw err;
     })
   }
+
   return (
     <>
      <Input
