@@ -40,5 +40,6 @@ const Detail = () => {
       <Footer />
     </Container>
   );
+  <Footer/>
 };
 export default Detail;
