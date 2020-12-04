@@ -1,7 +1,9 @@
 import React, {useState} from "react";
 import API from "../utils/API"
 import {Input,FormBtn} from "../components/Form"
+import './create.css';
 // import Footer from "../components/Footer"
+
 
 const Create = () => {
 
@@ -35,7 +37,9 @@ const Create = () => {
         onChange={handleInputChange}
         name="name"
         placeholder="Name"
-        />
+        />  
+        
+
       <FormBtn
       onClick={handleFormSubmit}
       >

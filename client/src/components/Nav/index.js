@@ -1,6 +1,7 @@
 import React, {useState} from "react"
 import "./style.css"
 import { Link } from "react-router-dom";
+import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 
 
 
@@ -19,7 +20,7 @@ console.log(searchValue)
 return (
   <>
 <nav className="navbar navbar-light">
-  <a className="navbar-brand" href="/">GIFTR</a>
+  <a className="navbar-brand" href="/">GIFTR<FavoriteBorderIcon /></a>
   <form className="form-inline">
     <input onChange={handleInputChange} className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"></input>
     <button onClick={(e)=> {e.preventDefault(); setSearched(searchValue)}}  className="btn btn-outline-secondary my-2 my-sm-0" type="submit"><Link to ={ "/showall/name/" + searchValue}> Search</Link></button>
