@@ -30,7 +30,7 @@ const Detail = () => {
       })
       .catch((err) => console.log(err));
     }
-  }, []);
+  }, [params]);
 
   return (
     <Container fluid>
