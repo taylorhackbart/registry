@@ -19,7 +19,7 @@ function App() {
       <Route exact path ="/" component={Home}/>
       <Route exact path ="/showall" component={ShowAll}/>
       <Route exact path = "/create" component={Create} />
-      <Route exact path = "/showall/:id" component = {Detail} />
+      <Route exact path = {["/showall/:id","/showall/name/:name"]} component = {Detail} />
     </div>
     </BrowserRouter>
 
