@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import API from "../utils/API";
 import Footer from "../components/Footer"
 import { Link } from "react-router-dom";
-import Footer from "../components/Footer"
 import {  List, ListItem } from "../components/List";
 
 const ShowAll = (props)=>{
@@ -57,6 +56,5 @@ const ShowAll = (props)=>{
         </div>
     )
 }
-<Footer/>
 
 export default ShowAll;
