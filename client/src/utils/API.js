@@ -17,11 +17,15 @@ export default {
   saveUser: function (userData) {
     return axios.post("/api/users", userData);
   },
+  
+  getUserByName: function(name) {
+    return axios.get("/api/users/name/" + name)
+  },
 
   saveReviews: function (reviewData) {
     return axios.post("/api/reviews", reviewData);
   },
-
+  
   getReviews: function () {
     return axios.get("/api/reviews");
   }

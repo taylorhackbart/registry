@@ -32,5 +32,12 @@ module.exports = {
         .then(dbModel => dbModel.remove())
         .then(dbModel => res.json(dbModel))
         .catch(err => res.status(422).json(err));
+    },
+
+    findAllByName: function(req, res){
+      db.User 
+        .find({name: req.params.name})
+        .then(dbModel => res.json(dbModel))
+        .catch(err => res.status(422).json(err));
     }
   };

@@ -6,27 +6,21 @@ body {
   p {font-size: 16px;}
   .margin {margin-bottom: 45px;}
   
-  .bg-3 { 
-    background-color: #ffffff; /* White */
-    color: #555555;
-  }
+  
   
   .container-fluid {
-    padding-top: 70px;
-    padding-bottom: 70px;
+    padding-top: 30px;
+    padding-bottom: 50px;
   }
   
- .img-circle{
-    display:inline;
-    
-  }
+
   .btn-default {
       margin: 10px;
+  } 
+   
+  img {
+    height:60%;
+    padding: 14px
   }
-  /* .margin{
-    width: 100%
-  } */
 
-  .card {
-    
-  }
+  
