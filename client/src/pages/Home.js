@@ -3,10 +3,10 @@ import "./home.css";
 import Reviews from "../components/Reviews/Index";
 import Footer from "../components/Footer";
 
-function Projects() {
+function Home() {
   return (
     <>
-  
+
       <div className="container-fluid">
         <div className="bg-3 text-center">
           <h3 className="margin"> </h3>
@@ -24,7 +24,6 @@ function Projects() {
                 </p>
               </div>
             </div>
-
             <div className="card col-sm-4">
               <img className="card-img-top" alt="..." />
               <div className="card-body">
@@ -37,34 +36,12 @@ function Projects() {
                 </p>
               </div>
             </div>
-            )
-
-
-
-function Home() {
-    return (
-        <>
-            <a href="project"></a>
-            <div className="container-fluid bg-3 text-center">
-                <h3 className="margin"></h3><br />
-                <div className="row">
-                    <div className="col-sm-4 ">
-                        <h1>Holiday</h1>
-                    </div>
-                    <div className="col-sm-4 ">
-                        <h1>Holiday</h1>
-                    </div>
-                    <div className="col-sm-4 ">
-                        <h1>Holiday</h1>
-                    </div>
-                </div>
-            </div>
           </div>
         </div>
-      </div>
+        </div>
 
-      <Reviews />
-      <Footer />
+        <Reviews />
+        <Footer />
     </>
   );
 }
