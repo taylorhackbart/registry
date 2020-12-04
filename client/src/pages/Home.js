@@ -47,6 +47,7 @@ function Projects() {
         </a>
 
         <Reviews />
+        <Footer/>
    </>
         
     )

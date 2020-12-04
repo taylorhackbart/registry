@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
 import API from "../utils/API";
 import { List, ListItem } from "../components/List";
+import Footer from "../components/Footer"
 
 
 const Detail = () => {
@@ -38,5 +39,6 @@ const Detail = () => {
       </Row>
     </Container>
   );
+  <Footer/>
 };
 export default Detail;
