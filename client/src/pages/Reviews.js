@@ -1,39 +1,39 @@
 import React, { useState } from "react";
-import API from "../../utils/API";
+import API from "../utils/API";
 
 function Reviews() {
     // Setting our component's initial state
+    const [form, setForm]= useState([])
     const [formObject, setFormObject] = useState({
         name : "",
-        review : "",
-        picture: ""
+        text : "",
+        image: "",
 
     })
-    const [form,setForm]= useState([])
 
     // Handles updating component state when the user types into the input field
     function handleInputChange(event) {
         const { name, value } = event.target;
+        console.log(name, value)
         setFormObject({ ...formObject, [name]: value })
-        console.log(value)
     };
 
     function handleFormSubmit(event) {
-        event.preventDefault();
+        // event.preventDefault();
         
         console.log("I hit the route");
-        if (formObject.name && formObject.review) {
+
             API.saveReviews(formObject)
-                .then(res => {
+                .then(data => {
+                    console.log(data);
                     const reviewArr = form.slice(0);
-                    reviewArr.push(res);
+                    reviewArr.push(data);
                     setForm(reviewArr);
                     console.log("I hit the route");
-                    console.log(res);
                 })
             
                 .catch(err => console.log(err));
-        }
+        
     };
 
     return (
@@ -47,16 +47,16 @@ function Reviews() {
                 </div>
                 <div className="form-group">
                     <input className="form-control" onChange={handleInputChange}
-                        name="review"
+                        name="text"
                         placeholder="write your review (required)" />
                 </div>
                 <div className="form-group">
                     <input className="form-control" onChange={handleInputChange}
-                        name="picture"
+                        name="image"
                         placeholder="picture url (required)" />
                 </div>
 
-                <button disabled={!(formObject.name && formObject.review)}
+                <button disabled={!(formObject.name && formObject.text)}
                     onClick={handleFormSubmit}> submit</button>
             </form>
             </>
