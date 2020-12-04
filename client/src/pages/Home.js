@@ -5,11 +5,14 @@ import Footer from "../components/Footer";
 // import ReviewsForm from "../components/ReviewsForm/form"
 
 
+
+
+
 function Home() {
   return (
+
     <>
-
-
+   
       <div className="container-fluid">
         <div className="text-center">
           <h3 className="margin"> </h3>
@@ -60,7 +63,9 @@ function Home() {
       <Reviews />
       {/* <ReviewsForm /> */}
       <Footer />
+  
     </>
+   
   );
 }
 

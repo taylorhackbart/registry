@@ -4,6 +4,7 @@ import {Input,FormBtn} from "../components/Form"
 import { Link } from "react-router-dom";
 // import Footer from "../components/Footer"
 
+
 const Create = () => {
 
   const [userName, setUserName] = useState([]);
@@ -37,7 +38,9 @@ const Create = () => {
         onChange={handleInputChange}
         name="name"
         placeholder="Name"
-        />
+        />  
+        
+
       <FormBtn
       onClick={handleFormSubmit}
       >
