@@ -12,8 +12,8 @@ const ShowAll = (props)=>{
         console.log(users)
     },[])
 
-    const loadUsers = ()=>{
-        API.findAllByName().then(res => {
+    const loadUsers = () => {
+        API.getUserByName().then(res => {
             console.log(res.data)
             setUsers(res.data)
             console.log(users)
