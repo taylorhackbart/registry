@@ -14,11 +14,22 @@ const Detail = () => {
   const params = useParams();
 
   useEffect(() => {
-    API.getUser(params.id).then((res) => {
-      setUser(res.data);
-      console.log(res.data);
-    });
-    // .catch((err) => console.log(err));
+    console.log(params)
+    if(params.id){
+      API.getUser(params.id).then((res) => {
+        console.log(params.id)
+        console.log(res.data)
+        setUser(res.data)
+      })
+      .catch((err) => console.log(err));
+    } else if (params.name){
+      API.getUserByName(params.name).then((res) => {
+        // console.log(params.name)
+        // console.log(res.data[0])
+        setUser(res.data[0])
+      })
+      .catch((err) => console.log(err));
+    }
   }, []);
 
   return (
