@@ -2,7 +2,7 @@ import React from "react";
 import "./home.css";
 import Reviews from "../components/Reviews/Index";
 import Footer from "../components/Footer";
-import { Link } from "react-router-dom";
+
 
 
 
@@ -10,11 +10,9 @@ function Projects() {
 
   return (
     <>
-  <form className="form-inline">
-  <Link to ='/create'><button href="/create" className="btn btn-outline-secondary my-2 my-sm-0" type="submit">Create Registry</button></Link>
-  </form>
+ 
       <div className="container-fluid">
-        <div className="bg-3 text-center">
+        <div className="text-center">
           <h3 className="margin"> </h3>
           <br />
           <div className="row">
