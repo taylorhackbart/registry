@@ -4,7 +4,22 @@ import {Input,FormBtn} from "../Form"
 
 const Gift = (props)=>{
     // const [gifts, setGift] = useState([])
+    const [user, setUser] = useState({
+        name: "",
+        giftList: [],
+      });
     const [formObject, setFormObject] = useState({})
+    console.log("props: "+props.list)
+    // setGift(props.list)
+    // console.log("state: "+gifts)
+
+    const setGifts=()=>{
+        console.log(props.list)
+        setUser(props.list)
+        // setGift(props.list);
+        // console.log(gifts)
+    }
+    setGifts()
 
     const handleInputChange=(event)=>{
         const { name, value } = event.target;
@@ -13,11 +28,10 @@ const Gift = (props)=>{
     
     const handleFormSubmit=(event)=>{
         event.preventDefault();
-          API.saveBook({
-            title: formObject.title,
-            image: formObject.image,
-            link: formObject.link
-          })
+        // var newArr = gifts
+        // console.log(gifts)
+        // newArr.push(formObject)
+        // setGift(newArr)
         //     .then(res => loadBooks())
         //     .catch(err => console.log(err));
         

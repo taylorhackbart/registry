@@ -1,13 +1,15 @@
 import React, {useState} from "react";
 import API from "../utils/API"
 import {Input,FormBtn} from "../components/Form"
+import { Link } from "react-router-dom";
 // import Footer from "../components/Footer"
 
 const Create = () => {
 
   const [userName, setUserName] = useState([]);
   const [userObj, setUserObj] = useState({
-    name: ""
+    name: "",
+    giftList: []
   })
 
   const handleInputChange = (event) => {
@@ -39,7 +41,8 @@ const Create = () => {
       <FormBtn
       onClick={handleFormSubmit}
       >
-        Submit
+        <Link to = {"/showall/name/" + userObj.name}>Submit</Link>
+        
       </FormBtn>
 
     

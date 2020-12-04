@@ -4,7 +4,8 @@ import { Col, Row, Container } from "../components/Grid";
 import API from "../utils/API";
 import { List, ListItem } from "../components/List";
 import Footer from "../components/Footer"
-import Gift from "../components/Gift"
+import {Input,FormBtn} from "../components/Form"
+
 
 
 const Detail = () => {
@@ -12,6 +13,7 @@ const Detail = () => {
     name: "",
     giftList: [],
   });
+  const [formObject, setFormObject] = useState({})
   const params = useParams();
 
   useEffect(() => {
@@ -33,13 +35,51 @@ const Detail = () => {
     }
   }, [params]);
 
+  const handleInputChange=(event)=>{
+    const { name, value } = event.target;
+    setFormObject({...formObject, [name]: value})
+  };
+
+  const handleFormSubmit=(event)=>{
+      event.preventDefault();
+      var newArr = user.giftList
+      console.log(newArr)
+      console.log(formObject)
+      newArr.push(formObject)
+      setUser({...user, giftList: newArr})
+      
+  };
+
   return (
     <Container fluid>
       <Row>
         <Col size="md-12">
           <p>{user.name}</p>
         <h2> Add a Gift! </h2>
-        <Gift />
+        <form>
+            <Input
+                onChange={handleInputChange} 
+                name="title"
+                placeholder="Title"
+            />
+            <Input 
+                onChange={handleInputChange}
+                name="image"
+                placeholder="Image"
+            />
+            <Input
+                onChange={handleInputChange}
+                name="link"
+                placeholder="Link"
+            />
+            <FormBtn
+                disabled={!(formObject.title && formObject.link)}
+                onClick={handleFormSubmit}
+              >
+                  Add gift
+              </FormBtn>
+            
+        </form>
             {user.giftList.map((gift) => (
               <List key={gift.title}>
                 <ListItem>{gift.title}</ListItem>
