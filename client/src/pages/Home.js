@@ -3,14 +3,11 @@ import "./home.css";
 import Reviews from "../components/Reviews/Index";
 import Footer from "../components/Footer";
 
-
-
-
-function Projects() {
-
+function Home() {
   return (
     <>
- 
+
+
       <div className="container-fluid">
         <div className="text-center">
           <h3 className="margin"> </h3>
@@ -56,6 +53,7 @@ function Projects() {
             </div>
           </div>
         </div>
+
       </div>
       <Reviews />
       <Footer />
@@ -63,4 +61,4 @@ function Projects() {
   );
 }
 
-export default Projects;
+export default Home;

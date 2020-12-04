@@ -1,17 +1,34 @@
-import React, { useState } from 'react';
-import people from './data';
+import React, { useState, useEffect } from 'react';
 import { FaChevronLeft, FaChevronRight, FaQuoteRight } from 'react-icons/fa';
+import API from "../../utils/API"
 import "./index.css"
 
 const Review = () => {
+  const [Reviews, setReviews] = useState([]);
   const [index, setIndex] = useState(0);
-  const { name, job, image, text } = people[index];
+  const { name, job, image, text } = Reviews[index];
+
+  useEffect(() => {
+    loadReviews()
+  }, [])
+
+  // Loads all books and sets them to books
+  function loadReviews() {
+    API.getReviews()
+      .then(res => {
+        console.log(res);
+        setReviews(res)
+        setIndex(0)
+      }
+      )
+      .catch(err => console.log(err));
+  };
   const checkNumber = (number) => {
-    if (number > people.length - 1) {
+    if (number > Reviews.length - 1) {
       return 0;
     }
     if (number < 0) {
-      return people.length - 1;
+      return Reviews.length - 1;
     }
     return number;
   };
@@ -28,7 +45,7 @@ const Review = () => {
     });
   };
   const randomPerson = () => {
-    let randomNumber = Math.floor(Math.random() * people.length);
+    let randomNumber = Math.floor(Math.random() * Reviews.length);
     if (randomNumber === index) {
       randomNumber = index + 1;
     }
