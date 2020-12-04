@@ -1,7 +1,9 @@
 import React from "react";
 import "./home.css";
-import Reviews from "../components/Reviews/Index";
+// import Reviews from "../components/Reviews/Index";
 import Footer from "../components/Footer";
+// import ReviewsForm from "../components/ReviewsForm/form"
+
 
 function Home() {
   return (
@@ -55,7 +57,8 @@ function Home() {
         </div>
 
       </div>
-      <Reviews />
+      {/* <Reviews /> */}
+      {/* <ReviewsForm /> */}
       <Footer />
     </>
   );
