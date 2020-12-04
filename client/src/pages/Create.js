@@ -8,7 +8,8 @@ const Create = () => {
 
   const [userName, setUserName] = useState([]);
   const [userObj, setUserObj] = useState({
-    name: ""
+    name: "",
+    giftList: []
   })
 
   const handleInputChange = (event) => {
