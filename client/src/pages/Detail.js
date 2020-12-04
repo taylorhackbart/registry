@@ -4,6 +4,7 @@ import { Col, Row, Container } from "../components/Grid";
 import API from "../utils/API";
 import { List, ListItem } from "../components/List";
 import Footer from "../components/Footer"
+import Gift from "../components/Gift"
 
 
 const Detail = () => {
@@ -14,19 +15,31 @@ const Detail = () => {
   const params = useParams();
 
   useEffect(() => {
-    API.getUser(params.id).then((res) => {
-      setUser(res.data);
-      console.log(res.data);
-    });
-    // .catch((err) => console.log(err));
-  }, []);
+    console.log(params)
+    if(params.id){
+      API.getUser(params.id).then((res) => {
+        console.log(params.id)
+        console.log(res.data)
+        setUser(res.data)
+      })
+      .catch((err) => console.log(err));
+    } else if (params.name){
+      API.getUserByName(params.name).then((res) => {
+        // console.log(params.name)
+        // console.log(res.data[0])
+        setUser(res.data[0])
+      })
+      .catch((err) => console.log(err));
+    }
+  }, [params]);
 
   return (
     <Container fluid>
       <Row>
         <Col size="md-12">
           <p>{user.name}</p>
-        
+        <h2> Add a Gift! </h2>
+        <Gift />
             {user.giftList.map((gift) => (
               <List key={gift.title}>
                 <ListItem>{gift.title}</ListItem>

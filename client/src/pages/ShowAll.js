@@ -12,6 +12,7 @@ const ShowAll = (props)=>{
         console.log(users)
     },[])
 
+
     const loadUsers = ()=>{
         API.getUsers().then(res => {
             console.log(res.data)

@@ -57,7 +57,6 @@ function Projects() {
           </div>
         </div>
       </div>
-
       <Reviews />
       <Footer />
     </>
