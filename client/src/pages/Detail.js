@@ -4,6 +4,7 @@ import { Col, Row, Container } from "../components/Grid";
 import API from "../utils/API";
 import { List, ListItem } from "../components/List";
 import Footer from "../components/Footer"
+import Gift from "../components/Gift"
 
 
 const Detail = () => {
@@ -37,7 +38,8 @@ const Detail = () => {
       <Row>
         <Col size="md-12">
           <p>{user.name}</p>
-        
+        <h2> Add a Gift! </h2>
+        <Gift />
             {user.giftList.map((gift) => (
               <List key={gift.title}>
                 <ListItem>{gift.title}</ListItem>
