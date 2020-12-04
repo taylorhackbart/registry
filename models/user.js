@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const userSchema = new Schema({
     name: {type: String, required: true},
     giftList: [{
-        title: {type: String, required: true},
+        title: {type: String},
         image: {type: String},
         link: {type: String}
       }]
