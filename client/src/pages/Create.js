@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import API from "../utils/API";
 import { Input, FormBtn } from "../components/Form";
 import { Link } from "react-router-dom";
-// import Footer from "../components/Footer"
-import { Card } from "react-bootstrap";
+// import Footer from "../components/Footer
+import { Card, Button } from "react-bootstrap";
+
 
 const Create = () => {
   const [userName, setUserName] = useState([]);
@@ -33,9 +34,9 @@ const Create = () => {
 
   return (
    <> 
-      
-  <div className="text-center" >
-      <Card className="mb-3" style={{ width: "40rem", padding: "20px"}}>
+
+  
+      <Card className="bg-dark text-white text-center" style={{ width: "40rem", padding: "20px"}}>
         <Card.Title>Create Your Own Registry Here!</Card.Title>
         <Card.Img src="https://www.honestlymodern.com/wp-content/uploads/2020/10/Gifts-Laying-on-a-Table-1.png" />
         <Card.Body>
@@ -48,11 +49,9 @@ const Create = () => {
 
       </Card>
 
-      
-
       {/* <Footer/> */}
-    </div>
-
+   
+    
     </>
 
   );

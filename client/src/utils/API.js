@@ -20,7 +20,7 @@ export default {
   
   updateUser: function (id,userData) {
     return axios.put("api/users/" + id, userData)
-  },
+  },                                                                  
 
   getUserByName: function(name) {
     return axios.get("/api/users/name/" + name)
