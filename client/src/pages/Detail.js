@@ -5,7 +5,7 @@ import API from "../utils/API";
 import { List, ListItem } from "../components/List";
 import Footer from "../components/Footer"
 import {Input,FormBtn} from "../components/Form"
-
+import Jumbotron from "../components/Jumbotron";
 
 
 const Detail = () => {
@@ -52,12 +52,22 @@ const Detail = () => {
       
   };
 
+
+  const heading = {
+    fontSize: '50px',
+    color: 'black'
+  }
+  
+  
+
+
   return (
     <Container fluid>
+      <Jumbotron>
+      <h2 style={heading}> Add a Gift, {user.name}! </h2>
+      </Jumbotron>
       <Row>
         <Col size="md-12">
-          <p>{user.name}</p>
-        <h2> Add a Gift! </h2>
         <form>
             <Input
                 onChange={handleInputChange} 

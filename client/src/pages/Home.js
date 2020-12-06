@@ -8,11 +8,11 @@ import Footer from "../components/Footer";
 
 
 
+
 function Home() {
   return (
 
     <>
-   
       <div className="container-fluid">
         <div className="text-center">
           <h3 className="margin"> </h3>

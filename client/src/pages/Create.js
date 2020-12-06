@@ -32,10 +32,9 @@ const Create = () => {
       });
   };
 
+ 
   return (
    <> 
-
-  
       <Card className="bg-dark text-white text-center" style={{ width: "40rem", padding: "20px"}}>
         <Card.Title>Create Your Own Registry Here!</Card.Title>
         <Card.Img src="https://www.honestlymodern.com/wp-content/uploads/2020/10/Gifts-Laying-on-a-Table-1.png" />
@@ -51,7 +50,7 @@ const Create = () => {
 
       {/* <Footer/> */}
    
-    
+      
     </>
 
   );
