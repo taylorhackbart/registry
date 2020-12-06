@@ -21,11 +21,11 @@ module.exports = {
         .catch(err => res.status(422).json(err));
     },
     update: function(req, res) {
-      console.log(req.body)
-      // db.User
-      //   .findOneAndUpdate({ _id: req.params.id} || {name: req.params.name}, req.body)
-      //   .then(dbModel => res.json(dbModel))
-      //   .catch(err => res.status(422).json(err));
+      // console.log(req.body)
+      db.User
+        .findOneAndUpdate({where: { _id: req.params.id} || {name: req.params.name}}, req.body)
+        .then(dbModel => res.json(dbModel))
+        .catch(err => res.status(422).json(err));
     },
     remove: function(req, res) {
       db.User
