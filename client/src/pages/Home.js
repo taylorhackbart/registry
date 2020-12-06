@@ -60,7 +60,9 @@ function Home() {
         </div>
 
       </div>
+      <div>
       <Reviews />
+      </div>
       {/* <ReviewsForm /> */}
       <Footer />
   
