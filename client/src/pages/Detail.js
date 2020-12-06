@@ -43,10 +43,12 @@ const Detail = () => {
   const handleFormSubmit=(event)=>{
       event.preventDefault();
       var newArr = user.giftList
-      console.log(newArr)
-      console.log(formObject)
       newArr.push(formObject)
       setUser({...user, giftList: newArr})
+      console.log(user)
+      API.updateUser(user._id,user).then((res) =>{
+        console.log(res)
+      }).catch(err=>{throw err})
       
   };
 
