@@ -45,7 +45,8 @@ const Detail = () => {
       var newArr = user.giftList
       newArr.push(formObject)
       setUser({...user, giftList: newArr})
-      API.saveUser(params.id,user).then((res) =>{
+      console.log(user)
+      API.updateUser(user._id,user).then((res) =>{
         console.log(res)
       }).catch(err=>{throw err})
       
