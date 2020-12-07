@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const db = require("../models");
+const db = require("../models/index");
 
 // This file empties the Books collection and inserts the books below
 
@@ -85,7 +85,6 @@ db.User
   const reviews = [
     {
       name: 'Gary Almes',
-      job: 'Happy customer',
       image:
         'https://avatars1.githubusercontent.com/u/444729?s=460&u=330513f5f275c8bfdd05cc3872748a33c032e830&v=4',
       text:
@@ -94,7 +93,6 @@ db.User
     {
   
       name: 'Taylor Hackbart',
-      job: 'Happy customer',
       image:
         'https://avatars3.githubusercontent.com/u/70908409?s=460&u=fdf643f665775c52b6be0c41361df9731772c9b2&v=4 ',
       text:
@@ -103,7 +101,6 @@ db.User
     {
   
       name: 'Jared Seefried',
-      job: 'Happy customer',
       image:
         'https://avatars2.githubusercontent.com/u/70176999?s=460&u=1feec23f681d336fd4222a4ff678bbbf9c69b9ef&v=4',
       text:
@@ -112,7 +109,6 @@ db.User
     {
   
       name: 'Jessica Acnocibar',
-      job: 'Happy customer',
       image:
         'https://avatars1.githubusercontent.com/u/70282395?s=460&u=15f43fbe51db8d0a0fa278ca0632c95fc8935782&v=4',
       text:
@@ -121,7 +117,6 @@ db.User
     {
    
       name: 'Matt Boggs',
-      job: 'Happy customer',
       image:
         'https://avatars1.githubusercontent.com/u/70782705?s=460&u=26c6b5591db508acd9a5925651d0118c71af6279&v=4 ',
       text:
@@ -130,7 +125,6 @@ db.User
     {
    
       name: 'Bishank Bohara',
-      job: 'Happy customer',
       image:
         'https://avatars2.githubusercontent.com/u/70497195?s=460&u=954afe996cada9b306e86c63f36614664e7e21cf&v=4 ',
       text:
@@ -139,7 +133,6 @@ db.User
     {
    
       name: 'Erin McGeever',
-      job: 'Happy customer',
       image:
         'https://avatars2.githubusercontent.com/u/70718705?s=460&u=866e91bbe571a7d5e4c38939739aba81b9988fc3&v=4  ',
       text:
