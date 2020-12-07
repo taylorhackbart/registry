@@ -98,7 +98,7 @@ const Detail = () => {
                 <ListItem>{gift.title}</ListItem>
                 <ListItem > <img src ={gift.image} alt="gift" ></img></ListItem>
                 <ListItem > <a href={gift.link} target="_blank"
-                rel="noreferrer" > Click to purchase </a></ListItem>
+                rel="noopener noreferrer" > Click to purchase </a></ListItem>
               </List>
             ))}
        
