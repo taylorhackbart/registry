@@ -3,13 +3,7 @@ import API from "../utils/API";
 
 function Reviews() {
     // Setting our component's initial state
-    const [form, setForm]= useState([])
-    const [formObject, setFormObject] = useState({
-        name : "",
-        text : "",
-        image: "",
-
-    })
+    const [formObject, setFormObject] = useState({})
 
     // Handles updating component state when the user types into the input field
     function handleInputChange(event) {
@@ -20,20 +14,13 @@ function Reviews() {
 
     function handleFormSubmit(event) {
         // event.preventDefault();
-        
-        console.log("I hit the route");
+        API.saveReviews(formObject)
+            .then(data => {
+                console.log(data);
+                console.log("I hit the route");
+            })
+            .catch(err => console.log(err));
 
-            API.saveReviews(formObject)
-                .then(data => {
-                    console.log(data);
-                    const reviewArr = form.slice(0);
-                    reviewArr.push(data);
-                    setForm(reviewArr);
-                    console.log("I hit the route");
-                })
-            
-                .catch(err => console.log(err));
-        
     };
 
     return (
@@ -59,10 +46,10 @@ function Reviews() {
                 <button disabled={!(formObject.name && formObject.text)}
                     onClick={handleFormSubmit}> submit</button>
             </form>
-            </>
-            
+        </>
 
-        
+
+
     );
 }
 
