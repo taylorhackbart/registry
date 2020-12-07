@@ -60,7 +60,7 @@ const Detail = () => {
     console.log(user)
     console.log(e.target.id)
     var newArr = user.giftList.filter(id =>{
-      return e.target.id != id._id
+      return e.target.id !== id._id
     })
     setUser({...user, giftList: newArr})
     API.updateUser(user._id,user).then((res) =>{
@@ -108,8 +108,8 @@ const Detail = () => {
         </form>
             {user.giftList.map((gift) => (
               <List key={gift.title} className="detail-list">
-                <ListItem>{gift.title}</ListItem>
-                <ListItem > <img className="detail" src ={gift.image} alt="gift" ></img><button id={gift._id} onClick={delGift}>DEL</button></ListItem>
+                <ListItem>{gift.title}<button className="delete-button" id={gift._id} onClick={delGift}>X</button></ListItem>
+                <ListItem > <img className="detail" src ={gift.image} alt="gift" ></img></ListItem>
                 <ListItem > <a href={gift.link} target="_blank"
                 rel="noopener noreferrer" > Click to purchase </a></ListItem>
               </List>
