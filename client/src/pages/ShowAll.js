@@ -2,9 +2,10 @@ import React, { useEffect, useState } from "react";
 import API from "../utils/API";
 import Footer from "../components/Footer"
 import { Link } from "react-router-dom";
-import {  List, ListItem } from "../components/List";
 
-const ShowAll = (props)=>{
+import "./show.css"
+
+const ShowAll = ()=>{
     const [users, setUsers] = useState([])
 
     useEffect(()=>{
@@ -16,7 +17,8 @@ const ShowAll = (props)=>{
     const loadUsers = ()=>{
         API.getUsers().then(res => {
             console.log(res.data)
-            setUsers(res.data)
+            const sortedUser = (res.data).sort((a,b)=> a.name > b.name ? 1: -1)
+            setUsers(sortedUser)
             console.log(users)
         }).catch(err => console.log(err))
     }
@@ -25,7 +27,9 @@ const ShowAll = (props)=>{
     return(
         <div>
             <ul>
-                <div>
+                <h3>List of Registries:</h3>
+                <h5> Click on a user to see their wishlist</h5>
+                <div className="usernameUpper">
                     {users.map(user => (
                         <div key={user._id}> 
                         <Link to ={ "/showall/" + user._id} >
@@ -33,21 +37,6 @@ const ShowAll = (props)=>{
                         {user.name} 
                         </strong> 
                         </Link>
-                        <ul>
-                            {user.giftList.map(gift =>(
-                                <ListItem key={gift.title}>
-                                <List>
-                                    {gift.title}
-                                </List>
-                                <List>
-                                    <img src={gift.image} width="80px" height="80px" alt="gift" />
-                                </List>
-                                <List>
-                                    {gift.link}
-                                </List>
-                                </ListItem>
-                            ))}
-                        </ul>
                         </div>
                     ))}
                 </div>

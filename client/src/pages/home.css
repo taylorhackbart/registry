@@ -1,7 +1,11 @@
 body {
     font: 20px Montserrat, sans-serif;
     line-height: 1.8;
+<<<<<<< HEAD
     color: #030d18;
+=======
+    color: black;
+>>>>>>> f86a6fc01f27b65e922b9afdad24b9bdaf670017
   }
   p {font-size: 16px;}
   .margin {margin-bottom: 45px;}
@@ -18,8 +22,12 @@ body {
   } 
    
   img {
-    height:60%;
+    height:50%;
     padding: 14px
   }
 
-  
+  h5 {
+    font-family: 'Cedarville Cursive', cursive;
+    font-size: 30px;
+    margin-left: 20px;
+}

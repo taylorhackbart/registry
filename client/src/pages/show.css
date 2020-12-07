@@ -1,0 +1,12 @@
+.usernameUpper{
+  text-transform: capitalize;
+  margin-left: 120px;
+  position:relative;
+  margin-top: 20px;
+  font-size: larger;
+  
+}
+h3, h5 {
+  margin-left: 60px;
+  margin-top: 30px;
+}

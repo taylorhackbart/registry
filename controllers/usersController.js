@@ -21,8 +21,10 @@ module.exports = {
         .catch(err => res.status(422).json(err));
     },
     update: function(req, res) {
+      console.log(req.body.giftList)
+      console.log(req.params)
       db.User
-        .findOneAndUpdate({ _id: req.params.id }, req.body)
+        .findOneAndUpdate({ _id: req.params.id} || {name: req.params.name}, {$set: {giftList: req.body.giftList}})
         .then(dbModel => res.json(dbModel))
         .catch(err => res.status(422).json(err));
     },

@@ -8,18 +8,18 @@ import Footer from "../components/Footer";
 
 
 
+
 function Home() {
   return (
 
     <>
-   
       <div className="container-fluid">
         <div className="text-center">
           <h3 className="margin"> </h3>
           <br />
           <div className="row">
             <div className="card col-sm-4">
-              <img src="https://25.media.tumblr.com/tumblr_mefpzkyRoj1rn0vh6o1_400.gif" className="card-img-top" alt="..."/>
+              <img src="https://m.media-amazon.com/images/I/71pN82bOmrL._AC_SY355_.jpg" className="card-img-top" alt="..."/>
               <div className="card-body">
                 <a href="/create" className="stretched-link">
                   <h5 className="card-title">Holidays</h5>
@@ -32,7 +32,7 @@ function Home() {
             </div>
 
             <div className="card col-sm-4">
-              <img src="https://media-api.xogrp.com/images/0c2aeb10-136f-4ac9-a2fb-83d862315f34~rs_768.h" className="card-img-top" alt="..." />
+              <img src="https://stylemotivation.com/wp-content/uploads/2020/02/elegant-vintage-inspired-outdoor-wedding-at-the-ridge-asheville-photography-anthology-38-700x1050-700x1050.jpg" className="card-img-top" alt="..." />
               <div className="card-body">
                 <a href="/create" className="stretched-link">
                   <h5 className="card-title">Weddings</h5>
@@ -45,7 +45,7 @@ function Home() {
             </div>
 
             <div className="card col-sm-4">
-              <img src="https://www.lolgifs.net/wp-content/uploads/2019/02/funny-birthday-gif.gif" className="card-img-top" alt="..." />
+              <img src="https://i.pinimg.com/736x/3e/0f/59/3e0f591bda52af0f8c456606f9c98dba.jpg" className="card-img-top" alt="..." />
               <div className="card-body">
                 <a href="/create" className="stretched-link">
                   <h5 className="card-title">Birthdays</h5>
@@ -60,7 +60,9 @@ function Home() {
         </div>
 
       </div>
+      <div>
       <Reviews />
+      </div>
       {/* <ReviewsForm /> */}
       <Footer />
   
