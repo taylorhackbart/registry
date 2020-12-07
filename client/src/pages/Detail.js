@@ -93,7 +93,7 @@ const Detail = () => {
             
         </form>
             {user.giftList.map((gift) => (
-              <List key={gift.title}>
+              <List key={gift.title} className="detail-list">
                 <ListItem>{gift.title}</ListItem>
                 <ListItem > <img src ={gift.image} alt="gift" ></img></ListItem>
                 <ListItem > <a href={gift.link} > Click to purchase </a></ListItem>
