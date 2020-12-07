@@ -57,13 +57,13 @@ const Review = () => {
   };
 
   // generates a random index
-  const randomPerson = () => {
-    let randomNumber = Math.floor(Math.random() * reviewsArr.length);
-    if (randomNumber === index) {
-      randomNumber = index + 1;
-    }
-    setIndex(checkNumber(randomNumber));
-  };
+  // const randomPerson = () => {
+  //   let randomNumber = Math.floor(Math.random() * reviewsArr.length);
+  //   if (randomNumber === index) {
+  //     randomNumber = index + 1;
+  //   }
+  //   setIndex(checkNumber(randomNumber));
+  // };
 
   // this is the return block
   return (
