@@ -77,7 +77,7 @@ const Review = () => {
       <h4 className='author'>{review.name}</h4>
       <p className='job'>{job}</p>
       <p className='info'>{review.text}</p>
-      <div className='button-container'>
+      <div className='button-container'> 
         <button className='prev-btn' onClick={prevPerson}>
           <FaChevronLeft />
         </button>
