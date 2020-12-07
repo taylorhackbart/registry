@@ -64,7 +64,7 @@ const Detail = () => {
      <div className="container-fluid">
      <Hero backgroundImage="https://www.thissimplebalance.com/wp-content/uploads/2019/10/gift-ideas-for-minimalists-840x630.jpg">
        <h1 className="text-center">Add A Gift, {user.name}!</h1>
-       <h2>Life is too short so treat yo' self</h2>
+       <h2>Treat Yourself Today</h2>
        </Hero>
       <Row>
         <Col size="md-12">
