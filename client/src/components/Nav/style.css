@@ -1,4 +1,12 @@
 .navbar-brand {
   margin-left: 20px;
   font-size: 50px;
+  margin-top: -10px;
+}
+
+.navbar{
+  background-color: #FFFFFF;
+  margin-bottom: 20px;
+  height: 85px;
+  
 }
