@@ -45,7 +45,7 @@ const Create = () => {
         </Card.Body>
 
         <Button variant="outline-light" onClick={handleFormSubmit}>
-        <Link to={"/showall/name/" + userObj.name}>Submit</Link>
+        <Link to={"/showall/name/" + userObj.name} className="submit-button-create">Submit</Link>
       </Button>
 
       </Card>

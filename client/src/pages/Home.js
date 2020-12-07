@@ -63,7 +63,6 @@ function Home() {
       <div>
       <Reviews />
       </div>
-      {/* <ReviewsForm /> */}
       <Footer />
   
     </>

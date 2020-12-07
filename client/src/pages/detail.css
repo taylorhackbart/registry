@@ -4,6 +4,7 @@ img.detail {
 }
 .list-overflow-container{
   margin-bottom: -80px;
+  border: none;
 }
 
 form {
@@ -11,4 +12,10 @@ form {
 }
 .list-group-item{
   text-transform: capitalize;
+}
+
+.delete-button{
+  float: right;
+  border: none;
+  background-color: white;
 }
