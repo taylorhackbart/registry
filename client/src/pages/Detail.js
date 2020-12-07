@@ -55,6 +55,19 @@ const Detail = () => {
       
   };
 
+  const delGift = (e)=>{
+    e.preventDefault()
+    console.log(user)
+    console.log(e.target.id)
+    var newArr = user.giftList.filter(id =>{
+      return e.target.id != id._id
+    })
+    setUser({...user, giftList: newArr})
+    API.updateUser(user._id,user).then((res) =>{
+      console.log(res)
+    }).catch(err=>{throw err})
+  }
+
   
 
 
@@ -96,7 +109,7 @@ const Detail = () => {
             {user.giftList.map((gift) => (
               <List key={gift.title} className="detail-list">
                 <ListItem>{gift.title}</ListItem>
-                <ListItem > <img className="detail" src ={gift.image} alt="gift" ></img></ListItem>
+                <ListItem > <img className="detail" src ={gift.image} alt="gift" ></img><button id={gift._id} onClick={delGift}>DEL</button></ListItem>
                 <ListItem > <a href={gift.link} target="_blank"
                 rel="noopener noreferrer" > Click to purchase </a></ListItem>
               </List>
