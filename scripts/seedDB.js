@@ -108,7 +108,7 @@ db.User
     },
     {
   
-      name: 'Jessica Acnocibar',
+      name: 'Jessica Anocibar',
       image:
         'https://avatars1.githubusercontent.com/u/70282395?s=460&u=15f43fbe51db8d0a0fa278ca0632c95fc8935782&v=4',
       text:

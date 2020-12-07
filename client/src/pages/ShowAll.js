@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import API from "../utils/API";
 import Footer from "../components/Footer"
 import { Link } from "react-router-dom";
+import Grid from '@material-ui/core/Grid';
 
 import "./show.css"
 
@@ -25,7 +26,7 @@ const ShowAll = ()=>{
 
 
     return(
-        <div>
+        <div className="resultsContainer">
             <ul>
                 <h3>List of Registries:</h3>
                 <h5> Click on a user to see their wishlist</h5>
@@ -39,8 +40,9 @@ const ShowAll = ()=>{
                         </Link>
                         </div>
                     ))}
-                </div>
+                    </div>
             </ul>
+            
             <Footer />
         </div>
     )
