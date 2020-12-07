@@ -85,9 +85,11 @@ const Review = () => {
           <FaChevronRight />
         </button>
       </div>
-      <button className='random-btn' onClick={randomPerson}>
-        surprise me
+      <a href="/reviews">
+      <button className='review-btn'>
+        Leave A Review!
       </button>
+      </a>
     </article>
   );
 

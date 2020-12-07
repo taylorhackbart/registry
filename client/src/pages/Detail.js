@@ -83,6 +83,7 @@ const Detail = () => {
                 onChange={handleInputChange}
                 name="link"
                 placeholder="Link"
+      
             />
             <FormBtn
                 disabled={!(formObject.title && formObject.link)}
@@ -96,7 +97,8 @@ const Detail = () => {
               <List key={gift.title}>
                 <ListItem>{gift.title}</ListItem>
                 <ListItem > <img src ={gift.image} alt="gift" ></img></ListItem>
-                <ListItem > <a href={gift.link} > Click to purchase </a></ListItem>
+                <ListItem > <a href={gift.link} target="_blank"
+                rel="noopener noreferrer" > Click to purchase </a></ListItem>
               </List>
             ))}
        
