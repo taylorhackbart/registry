@@ -13,8 +13,8 @@ HEROKU LINK HERE
 ### Usage:
 
 
-#### media1:
-![media1]()
+#### Home:
+![media1](./readmePIC/giftHome.PNG)
 
 #### media2:
 ![media2]()
