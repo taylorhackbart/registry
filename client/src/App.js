@@ -10,6 +10,7 @@ import Reviews from "./pages/Reviews";
 
 
 
+
 function App() {
   const [searched, setSearched] = useState([])
   console.log("searched", searched)

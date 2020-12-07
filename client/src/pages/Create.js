@@ -4,6 +4,7 @@ import { Input, FormBtn } from "../components/Form";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer"
 import { Card } from "react-bootstrap";
+import "./create.css";
 
 
 const Create = () => {
@@ -53,7 +54,7 @@ const Create = () => {
       
 
       <Footer/>
-    </div>
+    
 
     </>
 

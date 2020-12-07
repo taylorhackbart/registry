@@ -3,9 +3,12 @@ import { useParams } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
 import API from "../utils/API";
 import { List, ListItem } from "../components/List";
-import Footer from "../components/Footer"
-import {Input,FormBtn} from "../components/Form"
-import Jumbotron from "../components/Jumbotron";
+import Footer from "../components/Footer";
+import {Input,FormBtn} from "../components/Form";
+import Hero from "../components/Hero";
+import "./detail.css";
+
+
 
 
 const Detail = () => {
@@ -52,20 +55,17 @@ const Detail = () => {
       
   };
 
-
-  const heading = {
-    fontSize: '50px',
-    color: 'black'
-  }
-  
   
 
 
   return (
-    <Container fluid>
-      <Jumbotron>
-      <h2 style={heading}> Add a Gift, {user.name}! </h2>
-      </Jumbotron>
+
+   <div className="Detail" >
+     <div className="container-fluid">
+     <Hero backgroundImage="https://www.thissimplebalance.com/wp-content/uploads/2019/10/gift-ideas-for-minimalists-840x630.jpg">
+       <h1 className="text-center">Add A Gift, {user.name}!</h1>
+       <h2>Life is too short so treat yo' self</h2>
+       </Hero>
       <Row>
         <Col size="md-12">
         <form>
@@ -100,10 +100,12 @@ const Detail = () => {
               </List>
             ))}
        
-        </Col>
-      </Row>
-      <Footer />
-    </Container>
+          </Col>
+         </Row>
+        <Footer />
+      </div>
+    </div>
+  
   );
 };
 export default Detail;
