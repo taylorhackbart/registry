@@ -3,8 +3,11 @@ import { useParams } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
 import API from "../utils/API";
 import { List, ListItem } from "../components/List";
-import Footer from "../components/Footer"
-import {Input,FormBtn} from "../components/Form"
+import Footer from "../components/Footer";
+import {Input,FormBtn} from "../components/Form";
+import Hero from "../components/Hero";
+import "./detail.css";
+
 
 
 
@@ -52,12 +55,19 @@ const Detail = () => {
       
   };
 
+  
+
+
   return (
-    <Container fluid>
+
+   <div className="Detail" >
+     <div className="container-fluid">
+     <Hero backgroundImage="https://www.thissimplebalance.com/wp-content/uploads/2019/10/gift-ideas-for-minimalists-840x630.jpg">
+       <h1 className="text-center">Add A Gift, {user.name}!</h1>
+       <h2>Treat Yourself Today</h2>
+       </Hero>
       <Row>
         <Col size="md-12">
-          <p>{user.name}</p>
-        <h2> Add a Gift! </h2>
         <form>
             <Input
                 onChange={handleInputChange} 
@@ -90,10 +100,12 @@ const Detail = () => {
               </List>
             ))}
        
-        </Col>
-      </Row>
-      <Footer />
-    </Container>
+          </Col>
+         </Row>
+        <Footer />
+      </div>
+    </div>
+  
   );
 };
 export default Detail;
