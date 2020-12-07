@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+import { Button } from "react-bootstrap";
 import API from "../utils/API";
+
 
 function Reviews() {
     // Setting our component's initial state
@@ -43,7 +45,7 @@ function Reviews() {
                         placeholder="picture url (required)" />
                 </div>
 
-                <button disabled={!(formObject.name && formObject.text)}
+                <button variant="outline-dark" disabled={!(formObject.name && formObject.text)}
                     onClick={handleFormSubmit}> submit</button>
             </form>
         </>
