@@ -8,7 +8,7 @@ Create gift registries for special occasions, look at other users created regist
  [Installation](#Installation) || [Usage](#Usage) || [License](#License) || [Contributing](#Contributing) || [Tests](#Tests) || [Questions](#Questions)
 
 ### Hosted Application:
-HEROKU LINK HERE
+https://giftr-registry.herokuapp.com/
 
 ### Usage:
 
@@ -33,7 +33,7 @@ Testing at this stage is as simple as trying to break the application
 To contact the author of this repository, reach them via: 
 
 Github: https://github.com/taylorhackbart
-Email: taylor hackbart
+Email: taylor.hackbart@gmail.com
 
 Github: https://github.com/jessicaano92
 Email: j.anocibar92@gmail.com
