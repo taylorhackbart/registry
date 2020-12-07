@@ -7,7 +7,16 @@
   text-align: center;
   
 }
-h3, h5 {
+h3 {
+  margin-left: 60px;
+  margin-top: 30px;
+  text-align: center;
+  font-size: 80px;
+  color: whitesmoke;
+  font-family: 'Cedarville Cursive', cursive;
+}
+
+h5 {
   margin-left: 60px;
   margin-top: 30px;
   text-align: center;
@@ -16,6 +25,6 @@ h3, h5 {
 
 body {
   background-image: url('https://images.unsplash.com/photo-1546484396-fb3fc6f95f98?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHw%3D&w=2000&q=80');
-
+  
 
 }

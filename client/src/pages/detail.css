@@ -9,6 +9,7 @@ img.detail {
 
 form {
   margin-bottom: 80px;
+  padding-top: 20px
 }
 .list-group-item{
   text-transform: capitalize;
