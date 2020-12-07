@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { Col, Row, Container } from "../components/Grid";
+import { Col, Row } from "../components/Grid";
 import API from "../utils/API";
 import { List, ListItem } from "../components/List";
 import Footer from "../components/Footer";
@@ -55,6 +55,19 @@ const Detail = () => {
       
   };
 
+  const delGift = (e)=>{
+    e.preventDefault()
+    console.log(user)
+    console.log(e.target.id)
+    var newArr = user.giftList.filter(id =>{
+      return e.target.id !== id._id
+    })
+    setUser({...user, giftList: newArr})
+    API.updateUser(user._id,user).then((res) =>{
+      console.log(res)
+    }).catch(err=>{throw err})
+  }
+
   
 
 
@@ -94,9 +107,9 @@ const Detail = () => {
             
         </form>
             {user.giftList.map((gift) => (
-              <List key={gift.title}>
-                <ListItem>{gift.title}</ListItem>
-                <ListItem > <img src ={gift.image} alt="gift" ></img></ListItem>
+              <List key={gift.title} className="detail-list">
+                <ListItem>{gift.title}<button className="delete-button" id={gift._id} onClick={delGift}>X</button></ListItem>
+                <ListItem > <img className="detail" src ={gift.image} alt="gift" ></img></ListItem>
                 <ListItem > <a href={gift.link} target="_blank"
                 rel="noopener noreferrer" > Click to purchase </a></ListItem>
               </List>

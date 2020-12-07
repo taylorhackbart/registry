@@ -1,0 +1,21 @@
+img.detail {
+  height: 120px;
+  width: 120px;
+}
+.list-overflow-container{
+  margin-bottom: -80px;
+  border: none;
+}
+
+form {
+  margin-bottom: 80px;
+}
+.list-group-item{
+  text-transform: capitalize;
+}
+
+.delete-button{
+  float: right;
+  border: none;
+  background-color: white;
+}
