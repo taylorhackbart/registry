@@ -18,5 +18,6 @@ router
 router
 .route("/name/:name")
 .get(usersController.findAllByName)
+.put(usersController.update)
 
 module.exports = router;
