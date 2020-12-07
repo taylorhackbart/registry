@@ -27,3 +27,17 @@ body {
     font-size: 30px;
     margin-left: 20px;
 }
+
+.card-home {
+  align-items: center;
+  justify-content: center;
+  /* background-color: rgb(65, 58, 58); */
+  border: 5px solid black;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
+}
+
+.card-body {
+
+}
