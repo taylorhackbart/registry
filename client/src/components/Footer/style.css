@@ -1,12 +1,13 @@
 
 footer {
   padding-top: 10px;
-  color: white;
-  background: black;
-  position: fixed;
-  bottom: 0;
-  opacity: 50%;
+  color: black;
+  background: #FFFFFF;
+  position: relative;
+  /* bottom: -20; */
+  opacity: 40%;
   text-align: center;
   height: 40px;
-  width: 100%
+  width: 100%;
+  margin-top: 25%;
 }
