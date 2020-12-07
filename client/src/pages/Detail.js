@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { Col, Row, Container } from "../components/Grid";
+import { Col, Row } from "../components/Grid";
 import API from "../utils/API";
 import { List, ListItem } from "../components/List";
 import Footer from "../components/Footer";
@@ -107,9 +107,9 @@ const Detail = () => {
             
         </form>
             {user.giftList.map((gift) => (
-              <List key={gift.title}>
+              <List key={gift.title} className="detail-list">
                 <ListItem>{gift.title}</ListItem>
-                <ListItem > <img src ={gift.image} alt="gift" ></img><button id={gift._id} onClick={delGift}>DEL</button></ListItem>
+                <ListItem > <img className="detail" src ={gift.image} alt="gift" ></img><button id={gift._id} onClick={delGift}>DEL</button></ListItem>
                 <ListItem > <a href={gift.link} target="_blank"
                 rel="noopener noreferrer" > Click to purchase </a></ListItem>
               </List>
