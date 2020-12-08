@@ -24,7 +24,7 @@ function App() {
         <Route exact path = "/create" component={Create} />
         <Route exact path = {["/showall/:id","/showall/name/:name"]} component = {Detail} />
         <Route exact path = "/reviews" component={Reviews} />
-        <Route component={NoMatch} />
+        {/* <Route component={NoMatch} /> */}
       </div>
     </BrowserRouter>
 
