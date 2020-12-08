@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import API from "../utils/API";
 import { Link } from "react-router-dom";
+
+
+
 import "./show.css";
 
 const ShowAll = () => {
@@ -33,6 +36,7 @@ const ShowAll = () => {
               <Link to={"/showall/" + user._id}>
                 <strong>{user.name}</strong>
               </Link>
+              
             </div>
           ))}
         </div>
