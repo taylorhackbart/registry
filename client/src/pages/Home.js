@@ -22,8 +22,7 @@ function Home() {
                   <h5 className="card-title">Holidays</h5>
                 </a>
                 <p className="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
+                  The Holidays are coming! This helpful registry is perfect for family/friends/co-workers gift ideas. Make your list and check it twice!
                 </p>
               </div>
             </div>
@@ -39,8 +38,7 @@ function Home() {
                   <h5 className="card-title">Weddings</h5>
                 </a>
                 <p className="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
+                  This Wedding wishlist offers everything you need for a smart, waste-free wedding regristy. This is your one stop shop to find classic and unique collection of wedding decor. 
                 </p>
               </div>
             </div>
@@ -56,8 +54,7 @@ function Home() {
                   <h5 className="card-title">Birthdays</h5>
                 </a>
                 <p className="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
+                  Happy Birthday Wishlist designed for your friends and family! Don't forget to include custom pet socks, sorting hat bath bombs, and other goodies that will bring a smile to your friends faces. 
                 </p>
               </div>
             </div>
