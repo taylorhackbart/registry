@@ -2,7 +2,7 @@ img.detail {
   height: 120px;
   width: 120px;
 }
-.list-overflow-container{
+.list-overflow-container {
   margin-bottom: -80px;
   border: none;
 }
@@ -10,11 +10,11 @@ img.detail {
 form {
   margin-bottom: 80px;
 }
-.list-group-item{
+.list-group-item {
   text-transform: capitalize;
 }
 
-.delete-button{
+.delete-button {
   float: right;
   border: none;
   background-color: white;

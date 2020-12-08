@@ -3,124 +3,135 @@ import { useParams } from "react-router-dom";
 import { Col, Row } from "../components/Grid";
 import API from "../utils/API";
 import { List, ListItem } from "../components/List";
-import Footer from "../components/Footer";
-import {Input,FormBtn} from "../components/Form";
+// import Footer from "../components/Footer";
+import { Input, FormBtn } from "../components/Form";
 import Hero from "../components/Hero";
 import "./detail.css";
-
-
-
 
 const Detail = () => {
   const [user, setUser] = useState({
     name: "",
     giftList: [],
   });
-  const [formObject, setFormObject] = useState({})
+  const [formObject, setFormObject] = useState({});
   const params = useParams();
 
   useEffect(() => {
-    console.log(params)
-    if(params.id){
-      API.getUser(params.id).then((res) => {
-        console.log(params.id)
-        console.log(res.data)
-        setUser(res.data)
-      })
-      .catch((err) => console.log(err));
-    } else if (params.name){
-      API.getUserByName(params.name).then((res) => {
-        // console.log(params.name)
-        // console.log(res.data[0])
-        setUser(res.data[0])
-      })
-      .catch((err) => console.log(err));
+    console.log(params);
+    if (params.id) {
+      API.getUser(params.id)
+        .then((res) => {
+          console.log(params.id);
+          console.log(res.data);
+          setUser(res.data);
+        })
+        .catch((err) => console.log(err));
+    } else if (params.name) {
+      API.getUserByName(params.name)
+        .then((res) => {
+          // console.log(params.name)
+          // console.log(res.data[0])
+          setUser(res.data[0]);
+        })
+        .catch((err) => console.log(err));
     }
   }, [params]);
 
-  const handleInputChange=(event)=>{
+  const handleInputChange = (event) => {
     const { name, value } = event.target;
-    setFormObject({...formObject, [name]: value})
+    setFormObject({ ...formObject, [name]: value });
   };
 
-  const handleFormSubmit=(event)=>{
-      event.preventDefault();
-      var newArr = user.giftList
-      newArr.push(formObject)
-      setUser({...user, giftList: newArr})
-      console.log(user)
-      API.updateUser(user._id,user).then((res) =>{
-        console.log(res)
-      }).catch(err=>{throw err})
-      
+  const handleFormSubmit = (event) => {
+    event.preventDefault();
+    var newArr = user.giftList;
+    newArr.push(formObject);
+    setUser({ ...user, giftList: newArr });
+    console.log(user);
+    API.updateUser(user._id, user)
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        throw err;
+      });
   };
 
-  const delGift = (e)=>{
-    e.preventDefault()
-    console.log(user)
-    console.log(e.target.id)
-    var newArr = user.giftList.filter(id =>{
-      return e.target.id !== id._id
-    })
-    setUser({...user, giftList: newArr})
-    API.updateUser(user._id,user).then((res) =>{
-      console.log(res)
-    }).catch(err=>{throw err})
-  }
-
-  
-
+  const delGift = (e) => {
+    e.preventDefault();
+    console.log(user);
+    console.log(e.target.id);
+    var newArr = user.giftList.filter((id) => {
+      return e.target.id !== id._id;
+    });
+    setUser({ ...user, giftList: newArr });
+    API.updateUser(user._id, user)
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        throw err;
+      });
+  };
 
   return (
-
-   <div className="Detail" >
-     <div className="container-fluid">
-     <Hero backgroundImage="https://www.thissimplebalance.com/wp-content/uploads/2019/10/gift-ideas-for-minimalists-840x630.jpg">
-       <h1 className="text-center">Add A Gift, {user.name}!</h1>
-       <h2>Treat Yourself Today</h2>
-       </Hero>
-      <Row>
-        <Col size="md-12">
-        <form>
-            <Input
-                onChange={handleInputChange} 
+    <div className="Detail">
+      <div className="container-fluid">
+        <Hero backgroundImage="https://www.thissimplebalance.com/wp-content/uploads/2019/10/gift-ideas-for-minimalists-840x630.jpg">
+          <h1 className="text-center">Add A Gift, {user.name}!</h1>
+          <h2>Treat Yourself Today</h2>
+        </Hero>
+        <Row>
+          <Col size="md-12">
+            <form>
+              <Input
+                onChange={handleInputChange}
                 name="title"
                 placeholder="Title"
-            />
-            <Input 
+              />
+              <Input
                 onChange={handleInputChange}
                 name="image"
                 placeholder="Image"
-            />
-            <Input
+              />
+              <Input
                 onChange={handleInputChange}
                 name="link"
                 placeholder="Link"
-      
-            />
-            <FormBtn
+              />
+              <FormBtn
                 disabled={!(formObject.title && formObject.link)}
                 onClick={handleFormSubmit}
               >
-                  Add gift
+                Add gift
               </FormBtn>
-            
-        </form>
+            </form>
             {user.giftList.map((gift) => (
               <List key={gift.title} className="detail-list">
-                <ListItem>{gift.title}<button className="delete-button" id={gift._id} onClick={delGift}>X</button></ListItem>
-                <ListItem > <img className="detail" src ={gift.image} alt="gift" ></img></ListItem>
-                <ListItem > <a href={gift.link} target="_blank"
-                rel="noopener noreferrer" > Click to purchase </a></ListItem>
+                <ListItem>
+                  {gift.title}
+                  <button
+                    className="delete-button"
+                    id={gift._id}
+                    onClick={delGift}
+                  >
+                    X
+                  </button>
+                </ListItem>
+                <ListItem>
+                  <img className="detail" src={gift.image} alt="gift"></img>
+                </ListItem>
+                <ListItem>
+                  <a href={gift.link} target="_blank" rel="noopener noreferrer">
+                    Click to purchase
+                  </a>
+                </ListItem>
               </List>
             ))}
-       
           </Col>
-         </Row>
-        <Footer />
+        </Row>
       </div>
     </div>
-  
   );
 };
 export default Detail;
