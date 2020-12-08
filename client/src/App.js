@@ -9,8 +9,6 @@ import Reviews from "./pages/Reviews";
 
 
 
-
-
 function App() {
   const [searched, setSearched] = useState([])
   console.log("searched", searched)
@@ -18,14 +16,14 @@ function App() {
   return (
     
     <BrowserRouter>
-    <Nav setSearched={setSearched}/>
-    <div>
-      <Route exact path ="/" component={Home}/>
-      <Route exact path ="/showall" component={ShowAll}/>
-      <Route exact path = "/create" component={Create} />
-      <Route exact path = {["/showall/:id","/showall/name/:name"]} component = {Detail} />
-      <Route exact path = "/reviews" component={Reviews} />
-    </div>
+      <Nav setSearched={setSearched}/>
+      <div>
+        <Route exact path ="/" component={Home}/>
+        <Route exact path ="/showall" component={ShowAll}/>
+        <Route exact path = "/create" component={Create} />
+        <Route exact path = {["/showall/:id","/showall/name/:name"]} component = {Detail} />
+        <Route exact path = "/reviews" component={Reviews} />
+      </div>
     </BrowserRouter>
 
   );

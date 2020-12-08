@@ -8,13 +8,13 @@ router.route("/")
 .post(usersController.create);
 
 //Matches with "/api/users/:id"
-
 router
 .route("/:id")
 .get(usersController.findById)
 .put(usersController.update)
 .delete(usersController.remove);
 
+//Matches with "/api/users/name/:name"
 router
 .route("/name/:name")
 .get(usersController.findAllByName)
