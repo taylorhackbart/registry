@@ -1,4 +1,5 @@
 body {
+<<<<<<< HEAD
     font: 20px Montserrat, sans-serif;
     line-height: 1.8;
     color: #030d18;
@@ -27,3 +28,65 @@ body {
     font-size: 30px;
     margin-left: 20px;
 }
+=======
+  font: 20px Montserrat, sans-serif;
+  line-height: 1.8;
+  color: #030d18;
+}
+p {
+  font-size: 16px;
+}
+.margin {
+  margin-bottom: 45px;
+}
+
+.card-row {
+  margin-bottom: 50px;
+}
+.container-fluid {
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+
+.btn-default {
+  margin: 10px;
+}
+
+img {
+  height: 50%;
+  padding: 14px;
+}
+
+.card-title {
+  font-family: "Cedarville Cursive", cursive;
+  font-size: 30px;
+  margin-left: 20px;
+}
+
+.card-home {
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(65, 58, 58);
+  border: 4px solid khaki;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
+  height: 550px;
+}
+
+a {
+  color: grey;
+}
+
+a.stretched-link {
+  color: khaki;
+}
+
+.card-text {
+  color: #ffffff;
+}
+
+.reviews-class {
+  margin-bottom: 20px;
+}
+>>>>>>> d456946fbbcf28d7f6dc59ed33a5e52f629825e7

@@ -57,13 +57,13 @@ const Review = () => {
   };
 
   // generates a random index
-  const randomPerson = () => {
-    let randomNumber = Math.floor(Math.random() * reviewsArr.length);
-    if (randomNumber === index) {
-      randomNumber = index + 1;
-    }
-    setIndex(checkNumber(randomNumber));
-  };
+  // const randomPerson = () => {
+  //   let randomNumber = Math.floor(Math.random() * reviewsArr.length);
+  //   if (randomNumber === index) {
+  //     randomNumber = index + 1;
+  //   }
+  //   setIndex(checkNumber(randomNumber));
+  // };
 
   // this is the return block
   return (
@@ -77,7 +77,7 @@ const Review = () => {
       <h4 className='author'>{review.name}</h4>
       <p className='job'>{job}</p>
       <p className='info'>{review.text}</p>
-      <div className='button-container'>
+      <div className='button-container'> 
         <button className='prev-btn' onClick={prevPerson}>
           <FaChevronLeft />
         </button>
@@ -85,9 +85,11 @@ const Review = () => {
           <FaChevronRight />
         </button>
       </div>
-      <button className='random-btn' onClick={randomPerson}>
-        surprise me
+      <a href="/reviews">
+      <button className='review-btn'>
+        Leave A Review!
       </button>
+      </a>
     </article>
   );
 

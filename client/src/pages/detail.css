@@ -1,0 +1,33 @@
+img.detail {
+  height: 120px;
+  width: 120px;
+  
+}
+.list {
+  margin-bottom: -40px;
+  border: none;
+  width: 100%;
+  /* overflow-x: scroll; */
+
+}
+
+form {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-left: 105px;
+  margin-right: 105px; 
+  
+}
+.list-group-item {
+  text-transform: capitalize;
+}
+
+.delete-button {
+  float: right;
+  border: none;
+  background-color: white;
+}
+
+.hero {
+  border: 6px solid khaki;
+}

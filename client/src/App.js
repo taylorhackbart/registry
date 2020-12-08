@@ -6,8 +6,7 @@ import ShowAll from "./pages/ShowAll";
 import Create from "./pages/Create";
 import Detail from "./pages/Detail";
 import Reviews from "./pages/Reviews";
-
-
+import NoMatch from "./pages/NoMatch";
 
 
 
@@ -18,14 +17,15 @@ function App() {
   return (
     
     <BrowserRouter>
-    <Nav setSearched={setSearched}/>
-    <div>
-      <Route exact path ="/" component={Home}/>
-      <Route exact path ="/showall" component={ShowAll}/>
-      <Route exact path = "/create" component={Create} />
-      <Route exact path = {["/showall/:id","/showall/name/:name"]} component = {Detail} />
-      <Route exact path = "/reviews" component={Reviews} />
-    </div>
+      <Nav setSearched={setSearched}/>
+      <div>
+        <Route exact path ="/" component={Home}/>
+        <Route exact path ="/showall" component={ShowAll}/>
+        <Route exact path = "/create" component={Create} />
+        <Route exact path = {["/showall/:id","/showall/name/:name"]} component = {Detail} />
+        <Route exact path = "/reviews" component={Reviews} />
+        {/* <Route component={NoMatch} /> */}
+      </div>
     </BrowserRouter>
 
   );
