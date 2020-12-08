@@ -40,7 +40,7 @@ const Detail = () => {
     var newArr = user.giftList;
     newArr.push(formObject);
     setUser({ ...user, giftList: newArr });
-    setUser({...user, updatedAt: Date.now})
+    // setUser({...user, updatedAt: Date.now})
     API.updateUser(user._id, user)
       .then((res) => console.log(res))
       .catch((err) =>{ throw err });
@@ -50,7 +50,7 @@ const Detail = () => {
     e.preventDefault();
     var newArr = user.giftList.filter((id) => {return e.target.id !== id._id});
     setUser({ ...user, giftList: newArr});
-    setUser({...user, updatedAt: Date.now})
+    // setUser({...user, updatedAt: Date.now})
     API.updateUser(user._id, user)
       .then((res) => console.log(res))
       .catch((err) => { throw err });
