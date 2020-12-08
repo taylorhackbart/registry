@@ -1,6 +1,7 @@
 img.detail {
   height: 120px;
   width: 120px;
+  
 }
 .list {
   margin-bottom: -40px;
@@ -11,16 +12,11 @@ img.detail {
 }
 
 form {
-<<<<<<< HEAD
-  margin-bottom: 80px;
-  padding-top: 20px
-=======
   margin-top: 40px;
   margin-bottom: 40px;
   margin-left: 105px;
   margin-right: 105px; 
   
->>>>>>> main
 }
 .list-group-item {
   text-transform: capitalize;
@@ -32,9 +28,6 @@ form {
   background-color: white;
 }
 
-<<<<<<< HEAD
 .hero {
-  border: 4px solid khaki;
+  border: 6px solid khaki;
 }
-=======
->>>>>>> main

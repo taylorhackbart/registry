@@ -1,15 +1,8 @@
 .navbar-brand {
   margin-left: 20px;
-<<<<<<< HEAD
-  font-size: 50px;
-  margin-top: -40px;
-  font-family: 'Special Elite', cursive;
-
-=======
   font-size: 45px;
   /* margin-top: -0px; */
   font-family: "Ribeye Marrow", cursive;
->>>>>>> main
 }
 
 .navbar {
@@ -25,7 +18,3 @@
 .create-button {
   margin-right: 10px;
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> main

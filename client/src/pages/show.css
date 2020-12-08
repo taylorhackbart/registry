@@ -6,33 +6,25 @@
   font-size: larger;
   text-align: center;
 }
-<<<<<<< HEAD
 h3 {
+  font-family: "Cedarville Cursive", cursive;
   margin-left: 60px;
   margin-top: 30px;
   text-align: center;
-  font-size: 80px;
   color: whitesmoke;
-  font-family: 'Cedarville Cursive', cursive;
+  font-size: 80px;
 }
 
-=======
-h3,
->>>>>>> main
 h5 {
   margin-left: 60px;
   margin-top: 30px;
   text-align: center;
   color: whitesmoke;
+  font-size: 40px;
+  font-family: 'Reenie Beanie', cursive;
+  padding-top: 20px;
 }
 
 body {
-<<<<<<< HEAD
-  background-image: url('https://images.unsplash.com/photo-1546484396-fb3fc6f95f98?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHw%3D&w=2000&q=80');
-  
-
-}
-=======
   background-image: url("https://images.unsplash.com/photo-1546484396-fb3fc6f95f98?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHw%3D&w=2000&q=80");
 }
->>>>>>> main

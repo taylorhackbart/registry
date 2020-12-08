@@ -108,12 +108,6 @@ const Detail = () => {
             </form>
             {user.giftList.map((gift) => (
               <List key={gift.title} className="detail-list">
-<<<<<<< HEAD
-                <ListItem >{gift.title}<button className="delete-button" id={gift._id} onClick={delGift}>X</button></ListItem>
-                <ListItem > <img className="detail" src ={gift.image} alt="gift" ></img></ListItem>
-                <ListItem > <a href={gift.link} target="_blank"
-                rel="noopener noreferrer" > Click to purchase </a></ListItem>
-=======
                 <ListItem>
                   {gift.title}
                   <button
@@ -132,7 +126,6 @@ const Detail = () => {
                     Click to purchase
                   </a>
                 </ListItem>
->>>>>>> main
               </List>
             ))}
           </Col>
