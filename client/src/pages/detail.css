@@ -36,3 +36,27 @@ form {
 .hero {
   border: 6px solid khaki;
 }
+
+.website-btn {
+  background-color: rgb(219, 214, 168);
+  width: 100px;
+  height: 30px;
+  padding-right: 5px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.website-link-txt {
+  margin-top: 13px;
+  font-size: 35px;
+  color: whitesmoke;
+  font-family: 'Reenie Beanie', cursive;
+}
+
+.align-btns {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
+ 
+}

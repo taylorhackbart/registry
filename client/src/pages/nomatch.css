@@ -1,0 +1,18 @@
+h1.not-found{
+  text-align: center;
+  color: black;
+  font-family: "Cedarville Cursive", cursive
+}
+
+h3.showall-match{
+  font-size: 70px;
+  font: 20px Montserrat, sans-serif;
+  color: black
+}
+
+h4.create-match{
+  font-size: 30px;
+  color: black;
+  text-align: center;
+}
+

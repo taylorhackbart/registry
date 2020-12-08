@@ -5,7 +5,7 @@
 Create gift registries for special occasions, look at other users created registries
 
 ## Table of Contents 
- [Hosted](#Hosted Application) || [Usage](#Usage) || [License](#License) || [Contributing](#Contributing) || [Tests](#Tests) || [Questions](#Questions)
+ [Hosted](#Hosted_Application) || [Usage](#Usage) || [License](#License) || [Contributing](#Contributing) || [Tests](#Tests) || [Questions](#Questions)
 
 ### Hosted Application:
 https://giftr-registry.herokuapp.com/

@@ -88,7 +88,7 @@ db.User
       image:
         'https://avatars1.githubusercontent.com/u/444729?s=460&u=330513f5f275c8bfdd05cc3872748a33c032e830&v=4',
       text:
-        'It was perfect timing for me, so I snapped up the deal. Giftr has a lot of great features including their content and ability to save searches.',
+        'It was perfect timing for me, so I snapped up the deal. Giftr has a lot of great features including their content and ability to save gifts!.',
     },
     {
   
@@ -104,7 +104,7 @@ db.User
       image:
         'https://avatars2.githubusercontent.com/u/70176999?s=460&u=1feec23f681d336fd4222a4ff678bbbf9c69b9ef&v=4',
       text:
-        'I like the fact that is it one of the most stable, secure membership sites. Its used by tons of members because of its sturdiness.',
+        'I like the fact that is it one of the most stable, secure, and easy to use sites. Its used by tons of members because of its sturdiness.',
     },
     {
   
@@ -112,7 +112,7 @@ db.User
       image:
         'https://avatars1.githubusercontent.com/u/70282395?s=460&u=15f43fbe51db8d0a0fa278ca0632c95fc8935782&v=4',
       text:
-        'Its a powerful and relatively simple membership wishlist membership site. It gives us exactly what we need and its easy to search.',
+        'Its a powerful and relatively simple gift list site! It gives us exactly what we need and I love the aesthetic!',
     },
     {
    

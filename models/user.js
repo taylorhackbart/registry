@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const moment = require("moment")
 const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
@@ -8,7 +9,12 @@ const userSchema = new Schema({
         title: {type: String},
         image: {type: String},
         link: {type: String}
-      }]
+
+      }],
+      updatedAt: {
+        type: Date,
+        default: Date.now
+      }
 })
 
 const User = mongoose.model("User", userSchema)

@@ -13,6 +13,7 @@ const Detail = () => {
   const [user, setUser] = useState({
     name: "",
     giftList: [],
+    updatedAt: ""
   });
   const [formObject, setFormObject] = useState({});
   const params = useParams();
@@ -21,7 +22,7 @@ const Detail = () => {
     if (params.id) {
       API.getUser(params.id)
         .then((res) => setUser(res.data))
-        .catch((err) => console.log("error boiiiii"));
+        .catch((err) => console.log(err));
     } else if (params.name) {
       API.getUserByName(params.name)
         .then((res) => setUser(res.data[0]))
@@ -39,6 +40,7 @@ const Detail = () => {
     var newArr = user.giftList;
     newArr.push(formObject);
     setUser({ ...user, giftList: newArr });
+    setUser({...user, updatedAt: Date.now})
     API.updateUser(user._id, user)
       .then((res) => console.log(res))
       .catch((err) =>{ throw err });
@@ -47,7 +49,8 @@ const Detail = () => {
   const delGift = (e) => {
     e.preventDefault();
     var newArr = user.giftList.filter((id) => {return e.target.id !== id._id});
-    setUser({ ...user, giftList: newArr });
+    setUser({ ...user, giftList: newArr});
+    setUser({...user, updatedAt: Date.now})
     API.updateUser(user._id, user)
       .then((res) => console.log(res))
       .catch((err) => { throw err });
@@ -56,12 +59,18 @@ const Detail = () => {
     return (
       <div className="Detail">
         <div className="container-fluid">
+        <p className="website-link-txt text-center">Here are a few links to get your Giftr going!</p>
           <Row>
-            <button><a href="https://www.amazon.com/" target="_blank">Amazon</a></button>
+            <div className="align-btns">
+            <button className="website-btn"><a href="https://www.amazon.com/" target="_blank" rel="noopener noreferrer">Amazon</a></button>
+            <button className="website-btn"><a href="https://www.etsy.com/" target="_blank" rel="noopener noreferrer">Etsy</a></button>
+            <button className="website-btn"><a href="https://www.target.com/" target="_blank" rel="noopener noreferrer">Target</a></button>
+            <button className="website-btn"><a href="https://www.wayfair.com/" target="_blank" rel="noopener noreferrer">Wayfair</a></button>
+            </div>
           </Row>
           <Hero backgroundImage="https://www.thissimplebalance.com/wp-content/uploads/2019/10/gift-ideas-for-minimalists-840x630.jpg">
             <h1 className="text-center">Add A Gift, {user.name}!</h1>
-            <h2>Treat Yourself Today</h2>
+            <h2>Treat Yo' Self</h2>
           </Hero>
           <Row>
             <Col size="md-12">
