@@ -66,8 +66,8 @@ function Home() {
       </div>
       <div className="reviews-class">
         <Reviews />
-      </div>
-    </>
+      </div>             
+  </>
   );
 }
 
