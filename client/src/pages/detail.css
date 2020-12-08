@@ -42,9 +42,10 @@ form {
 }
 
 .website-link-txt {
-  margin-top: -13px;
-  font-size: 20px;
+  margin-top: 13px;
+  font-size: 35px;
   color: whitesmoke;
+  font-family: 'Reenie Beanie', cursive;
 }
 
 .align-btns {
