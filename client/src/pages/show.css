@@ -6,12 +6,23 @@
   font-size: larger;
   text-align: center;
 }
-h3,
+h3 {
+  font-family: "Cedarville Cursive", cursive;
+  margin-left: 60px;
+  margin-top: 30px;
+  text-align: center;
+  color: whitesmoke;
+  font-size: 80px;
+}
+
 h5 {
   margin-left: 60px;
   margin-top: 30px;
   text-align: center;
   color: whitesmoke;
+  font-size: 40px;
+  font-family: 'Reenie Beanie', cursive;
+  padding-top: 20px;
 }
 
 body {
