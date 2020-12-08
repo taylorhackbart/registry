@@ -31,3 +31,11 @@ form {
 .hero {
   border: 6px solid khaki;
 }
+
+.website-btn {
+  background-color: rgb(219, 214, 168);
+  width: 100px;
+  height: 30px;
+  padding-right: 5px;
+  margin: 15px;
+}
