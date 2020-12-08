@@ -1,18 +1,16 @@
 import React, { useState } from "react";
 import API from "../utils/API";
-import { Input} from "../components/Form";
+import { Input } from "../components/Form";
 import { Link } from "react-router-dom";
-import Footer from "../components/Footer"
+// import Footer from "../components/Footer"
 import { Card, Button } from "react-bootstrap";
 import "./create.css";
-
 
 const Create = () => {
   const [userName, setUserName] = useState([]);
   const [userObj, setUserObj] = useState({
     name: "",
     giftList: [],
-
   });
 
   const handleInputChange = (event) => {
@@ -34,29 +32,27 @@ const Create = () => {
       });
   };
 
- 
   return (
-   <> 
-      <Card className="bg-dark text-white text-center" style={{ width: "40rem", padding: "20px"}}>
+    <>
+      <Card
+        className="bg-dark text-white text-center"
+        style={{ width: "40rem", padding: "20px" }}
+      >
         <Card.Title>Create Your Own Registry Here!</Card.Title>
         <Card.Img src="https://www.honestlymodern.com/wp-content/uploads/2020/10/Gifts-Laying-on-a-Table-1.png" />
         <Card.Body>
-          <Input onChange={handleInputChange} name="name" placeholder="Name" />
+          <Input onChange={handleInputChange} name="name" placeholder="Jane Doe" />
         </Card.Body>
-
-        <Button variant="outline-light" onClick={handleFormSubmit}>
-        <Link to={"/showall/name/" + userObj.name} className="submit-button-create">Submit</Link>
-      </Button>
-
+        <Link
+          to={"/showall/name/" + userObj.name}
+          className="submit-button-create"
+        >
+          <Button variant="outline-light" onClick={handleFormSubmit}>
+            Submit
+          </Button>
+        </Link>
       </Card>
-
-      
-
-      <Footer/>
-    
-
     </>
-
   );
 };
 

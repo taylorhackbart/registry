@@ -1,21 +1,20 @@
 .navbar-brand {
   margin-left: 20px;
-  font-size: 50px;
-  margin-top: -40px;
+  font-size: 45px;
+  /* margin-top: -0px; */
+  font-family: "Ribeye Marrow", cursive;
 }
 
-.navbar{
-  background-color: #FFFFFF;
+.navbar {
+  background-color: rgb(219, 214, 168);
   margin-bottom: 20px;
   height: 85px;
-  
 }
-.format{
-  margin-top: 10px;
+.format-nav-bar {
+  margin-top: -30px;
+  margin-right: -90px;
 }
-/* .create-button{
-  margin-left: 10px;
-} */
-.create-button{
+
+.create-button {
   margin-right: 10px;
 }

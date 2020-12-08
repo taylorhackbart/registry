@@ -1,12 +1,12 @@
 .card {
-    align-items: center;
-    justify-content: center;
-    background-color: lightgrey;
-    border: 6px solid khaki;
-    margin-left: auto;
-    margin-right: auto;
+  align-items: center;
+  justify-content: center;
+  background-color: lightgrey;
+  border: 6px solid khaki;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.submit-button-create{
-    color: grey
+.submit-button-create {
+  color: grey;
 }
