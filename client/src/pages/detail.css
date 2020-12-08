@@ -20,3 +20,7 @@ form {
   border: none;
   background-color: white;
 }
+
+.hero {
+  border: 4px solid khaki;
+}

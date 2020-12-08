@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import API from "../utils/API";
 import Footer from "../components/Footer"
 import { Link } from "react-router-dom";
-import Grid from '@material-ui/core/Grid';
+
 
 import "./show.css"
 
