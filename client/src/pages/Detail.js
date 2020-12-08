@@ -13,6 +13,7 @@ const Detail = () => {
   const [user, setUser] = useState({
     name: "",
     giftList: [],
+    updatedAt: ""
   });
   const [formObject, setFormObject] = useState({});
   const params = useParams();
@@ -21,7 +22,7 @@ const Detail = () => {
     if (params.id) {
       API.getUser(params.id)
         .then((res) => setUser(res.data))
-        .catch((err) => console.log("error boiiiii"));
+        .catch((err) => console.log(err));
     } else if (params.name) {
       API.getUserByName(params.name)
         .then((res) => setUser(res.data[0]))
@@ -39,6 +40,7 @@ const Detail = () => {
     var newArr = user.giftList;
     newArr.push(formObject);
     setUser({ ...user, giftList: newArr });
+    setUser({...user, updatedAt: Date.now})
     API.updateUser(user._id, user)
       .then((res) => console.log(res))
       .catch((err) =>{ throw err });
@@ -47,7 +49,8 @@ const Detail = () => {
   const delGift = (e) => {
     e.preventDefault();
     var newArr = user.giftList.filter((id) => {return e.target.id !== id._id});
-    setUser({ ...user, giftList: newArr });
+    setUser({ ...user, giftList: newArr});
+    setUser({...user, updatedAt: Date.now})
     API.updateUser(user._id, user)
       .then((res) => console.log(res))
       .catch((err) => { throw err });
