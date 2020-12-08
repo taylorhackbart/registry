@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import API from "../utils/API";
 import { Link } from "react-router-dom";
 import "./show.css";
+import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 
 const ShowAll = () => {
   const [users, setUsers] = useState([]);
@@ -31,7 +32,7 @@ const ShowAll = () => {
           {users.map((user) => (
             <div key={user._id}>
               <Link to={"/showall/" + user._id}>
-                <strong>{user.name}</strong>
+              <AccountCircleIcon /> <strong>{user.name}</strong>
               </Link>
             </div>
           ))}
