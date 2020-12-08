@@ -9,10 +9,17 @@
   background-color: rgb(219, 214, 168);
   margin-bottom: 20px;
   height: 85px;
+  /* display: block; */
 }
 .format-nav-bar {
   margin-top: -30px;
   margin-right: -90px;
+}
+
+.btn {
+  /* display: inline; */
+  background-color: rgb(219, 214, 168);
+  font-weight: 500;
 }
 
 .create-button {
