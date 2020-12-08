@@ -59,8 +59,14 @@ const Detail = () => {
     return (
       <div className="Detail">
         <div className="container-fluid">
+        <p className="website-link-txt text-center">Here are a few links to get your Giftr going!</p>
           <Row>
-            <button><a href="https://www.amazon.com/" target="_blank">Amazon</a></button>
+            <div className="align-btns">
+            <button className="website-btn"><a href="https://www.amazon.com/" target="_blank" rel="noopener noreferrer">Amazon</a></button>
+            <button className="website-btn"><a href="https://www.etsy.com/" target="_blank" rel="noopener noreferrer">Etsy</a></button>
+            <button className="website-btn"><a href="https://www.target.com/" target="_blank" rel="noopener noreferrer">Target</a></button>
+            <button className="website-btn"><a href="https://www.wayfair.com/" target="_blank" rel="noopener noreferrer">Wayfair</a></button>
+            </div>
           </Row>
           <Hero backgroundImage="https://www.thissimplebalance.com/wp-content/uploads/2019/10/gift-ideas-for-minimalists-840x630.jpg">
             <h1 className="text-center">Add A Gift, {user.name}!</h1>
