@@ -11,16 +11,13 @@ const ShowAll = () => {
 
   useEffect(() => {
     loadUsers();
-    console.log(users);
   }, []);
 
   const loadUsers = () => {
     API.getUsers()
       .then((res) => {
-        console.log(res.data);
         const sortedUser = res.data.sort((a, b) => (a.name > b.name ? 1 : -1));
         setUsers(sortedUser);
-        console.log(users);
       })
       .catch((err) => console.log(err));
   };
@@ -36,7 +33,6 @@ const ShowAll = () => {
               <Link to={"/showall/" + user._id}>
                 <strong>{user.name}</strong>
               </Link>
-              
             </div>
           ))}
         </div>

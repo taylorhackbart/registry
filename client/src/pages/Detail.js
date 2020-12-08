@@ -17,22 +17,13 @@ const Detail = () => {
   const params = useParams();
 
   useEffect(() => {
-    console.log(params);
     if (params.id) {
       API.getUser(params.id)
-        .then((res) => {
-          console.log(params.id);
-          console.log(res.data);
-          setUser(res.data);
-        })
+        .then((res) => setUser(res.data))
         .catch((err) => console.log(err));
     } else if (params.name) {
       API.getUserByName(params.name)
-        .then((res) => {
-          // console.log(params.name)
-          // console.log(res.data[0])
-          setUser(res.data[0]);
-        })
+        .then((res) => setUser(res.data[0]))
         .catch((err) => console.log(err));
     }
   }, [params]);
@@ -47,31 +38,18 @@ const Detail = () => {
     var newArr = user.giftList;
     newArr.push(formObject);
     setUser({ ...user, giftList: newArr });
-    console.log(user);
     API.updateUser(user._id, user)
-      .then((res) => {
-        console.log(res);
-      })
-      .catch((err) => {
-        throw err;
-      });
+      .then((res) => console.log(res))
+      .catch((err) =>{ throw err });
   };
 
   const delGift = (e) => {
     e.preventDefault();
-    console.log(user);
-    console.log(e.target.id);
-    var newArr = user.giftList.filter((id) => {
-      return e.target.id !== id._id;
-    });
+    var newArr = user.giftList.filter((id) => {return e.target.id !== id._id});
     setUser({ ...user, giftList: newArr });
     API.updateUser(user._id, user)
-      .then((res) => {
-        console.log(res);
-      })
-      .catch((err) => {
-        throw err;
-      });
+      .then((res) => console.log(res))
+      .catch((err) => { throw err });
   };
 
   return (
