@@ -23,7 +23,7 @@ function Reviews() {
 
   return (
     <>
-      <form>
+      <form className= "form">
         <div className="form-group">
           <input
             className="form-control"
@@ -50,6 +50,7 @@ function Reviews() {
         </div>
 
         <button
+        className = "reviewBtn"
           variant="outline-dark"
           disabled={!(formObject.name && formObject.text)}
           onClick={handleFormSubmit}

@@ -1,4 +1,33 @@
 body {
+
+    font: 20px Montserrat, sans-serif;
+    line-height: 1.8;
+    color: #030d18;
+  }
+  p {font-size: 16px;}
+  .margin {margin-bottom: 45px;}
+  
+  
+  .container-fluid {
+    padding-top: 30px;
+    padding-bottom: 50px;
+  }
+  
+
+  .btn-default {
+      margin: 10px;
+  } 
+   
+  img {
+    height:50%;
+    padding: 14px
+  }
+
+  h5 {
+    font-family: 'Cedarville Cursive', cursive;
+    font-size: 30px;
+    margin-left: 20px;
+
   font: 20px Montserrat, sans-serif;
   line-height: 1.8;
   color: #030d18;
@@ -59,4 +88,5 @@ a.stretched-link {
 
 .reviews-class {
   margin-bottom: 20px;
+
 }
