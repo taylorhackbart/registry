@@ -2,25 +2,39 @@ img.detail {
   height: 120px;
   width: 120px;
 }
-.list-overflow-container{
-  margin-bottom: -80px;
+.list {
+  margin-bottom: -40px;
   border: none;
+  width: 100%;
+  /* overflow-x: scroll; */
+
 }
 
 form {
+<<<<<<< HEAD
   margin-bottom: 80px;
   padding-top: 20px
+=======
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-left: 105px;
+  margin-right: 105px; 
+  
+>>>>>>> main
 }
-.list-group-item{
+.list-group-item {
   text-transform: capitalize;
 }
 
-.delete-button{
+.delete-button {
   float: right;
   border: none;
   background-color: white;
 }
 
+<<<<<<< HEAD
 .hero {
   border: 4px solid khaki;
 }
+=======
+>>>>>>> main
