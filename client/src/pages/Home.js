@@ -22,7 +22,7 @@ function Home() {
                   <h5 className="card-title">Holidays</h5>
                 </a>
                 <p className="card-text">
-                  The Holidays are coming! This helpful registry is perfect for family/friends/co-workers gift ideas. Make your list and check it twice!
+                  Create a registry to share with friends and family. Make gift giving over the holidays easy.
                 </p>
               </div>
             </div>
@@ -38,7 +38,7 @@ function Home() {
                   <h5 className="card-title">Weddings</h5>
                 </a>
                 <p className="card-text">
-                  This Wedding wishlist offers everything you need for a smart, waste-free wedding registry. Add your gifts to make your dream day complete!
+                  Tying the knot? Start your new life together with gifts for both of you.
                 </p>
               </div>
             </div>
@@ -54,7 +54,7 @@ function Home() {
                   <h5 className="card-title">Birthdays</h5>
                 </a>
                 <p className="card-text">
-                  Happy Birthday gift list designed for you, your friends and family! Add any gifts you desire here through our affiliated links!
+                  Turning one, or turning one-hundred, gifts never get old.
                 </p>
               </div>
             </div>
