@@ -37,5 +37,17 @@ form {
   width: 100px;
   height: 30px;
   padding-right: 5px;
-  margin: 15px;
+  margin: 10px;
+  
+}
+
+.website-link-txt {
+  margin-top: 13px;
+  font-size: 20px;
+  color: whitesmoke;
+}
+
+.align-btns {
+  text-align: center;
+  margin-left: 440px;
 }
