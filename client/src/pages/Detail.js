@@ -7,6 +7,7 @@ import { List, ListItem } from "../components/List";
 import { Input, FormBtn } from "../components/Form";
 import Hero from "../components/Hero";
 import "./detail.css";
+import NoMatch from "./NoMatch";
 
 const Detail = () => {
   const [user, setUser] = useState({
@@ -20,7 +21,7 @@ const Detail = () => {
     if (params.id) {
       API.getUser(params.id)
         .then((res) => setUser(res.data))
-        .catch((err) => console.log(err));
+        .catch((err) => console.log("error boiiiii"));
     } else if (params.name) {
       API.getUserByName(params.name)
         .then((res) => setUser(res.data[0]))
@@ -51,65 +52,72 @@ const Detail = () => {
       .then((res) => console.log(res))
       .catch((err) => { throw err });
   };
-
-  return (
-    <div className="Detail">
-      <div className="container-fluid">
-        <Hero backgroundImage="https://www.thissimplebalance.com/wp-content/uploads/2019/10/gift-ideas-for-minimalists-840x630.jpg">
-          <h1 className="text-center">Add A Gift, {user.name}!</h1>
-          <h2>Treat Yourself Today</h2>
-        </Hero>
-        <Row>
-          <Col size="md-12">
-            <form>
-              <Input
-                onChange={handleInputChange}
-                name="title"
-                placeholder="Title"
-              />
-              <Input
-                onChange={handleInputChange}
-                name="image"
-                placeholder="Image"
-              />
-              <Input
-                onChange={handleInputChange}
-                name="link"
-                placeholder="Link"
-              />
-              <FormBtn
-                disabled={!(formObject.title && formObject.link)}
-                onClick={handleFormSubmit}
-              >
-                Add gift
-              </FormBtn>
-            </form>
-            {user.giftList.map((gift) => (
-              <List key={gift.title} className="detail-list">
-                <ListItem>
-                  {gift.title}
-                  <button
-                    className="delete-button"
-                    id={gift._id}
-                    onClick={delGift}
-                  >
-                    X
-                  </button>
-                </ListItem>
-                <ListItem>
-                  <img className="detail" src={gift.image} alt="gift"></img>
-                </ListItem>
-                <ListItem>
-                  <a href={gift.link} target="_blank" rel="noopener noreferrer">
-                    Click to purchase
-                  </a>
-                </ListItem>
-              </List>
-            ))}
-          </Col>
-        </Row>
+  {if (user){
+    return (
+      <div className="Detail">
+        <div className="container-fluid">
+          <Hero backgroundImage="https://www.thissimplebalance.com/wp-content/uploads/2019/10/gift-ideas-for-minimalists-840x630.jpg">
+            <h1 className="text-center">Add A Gift, {user.name}!</h1>
+            <h2>Treat Yourself Today</h2>
+          </Hero>
+          <Row>
+            <Col size="md-12">
+              <form>
+                <Input
+                  onChange={handleInputChange}
+                  name="title"
+                  placeholder="Title"
+                />
+                <Input
+                  onChange={handleInputChange}
+                  name="image"
+                  placeholder="Image"
+                />
+                <Input
+                  onChange={handleInputChange}
+                  name="link"
+                  placeholder="Link"
+                />
+                <FormBtn
+                  disabled={!(formObject.title && formObject.link)}
+                  onClick={handleFormSubmit}
+                >
+                  Add gift
+                </FormBtn>
+              </form>
+              {user.giftList.map((gift) => (
+                <List key={gift.title} className="detail-list">
+                  <ListItem>
+                    {gift.title}
+                    <button
+                      className="delete-button"
+                      id={gift._id}
+                      onClick={delGift}
+                    >
+                      X
+                    </button>
+                  </ListItem>
+                  <ListItem>
+                    <img className="detail" src={gift.image} alt="gift"></img>
+                  </ListItem>
+                  <ListItem>
+                    <a href={gift.link} target="_blank" rel="noopener noreferrer">
+                      Click to purchase
+                    </a>
+                  </ListItem>
+                </List>
+              ))}
+            </Col>
+          </Row>
+        </div>
       </div>
-    </div>
-  );
+    );
+
+  } else if (user === undefined) {
+    return(
+      <NoMatch />
+
+    )
+  }}
 };
 export default Detail;
