@@ -22,8 +22,7 @@ function Home() {
                   <h5 className="card-title">Holidays</h5>
                 </a>
                 <p className="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
+                  Create a registry to share with friends and family. Make gift giving over the holidays easy.
                 </p>
               </div>
             </div>
@@ -39,8 +38,7 @@ function Home() {
                   <h5 className="card-title">Weddings</h5>
                 </a>
                 <p className="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
+                  Tying the knot? Start your new life together with gifts for both of you.
                 </p>
               </div>
             </div>
@@ -56,8 +54,7 @@ function Home() {
                   <h5 className="card-title">Birthdays</h5>
                 </a>
                 <p className="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
+                  Turning one, or turning one-hundred, gifts never get old.
                 </p>
               </div>
             </div>

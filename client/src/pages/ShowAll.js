@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from "react";
 import API from "../utils/API";
 import { Link } from "react-router-dom";
-
-
-
 import "./show.css";
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import moment from "moment"
 
 const ShowAll = () => {
   const [users, setUsers] = useState([]);
@@ -33,6 +31,7 @@ const ShowAll = () => {
             <div key={user._id}>
               <Link to={"/showall/" + user._id}>
               <AccountCircleIcon /> <strong>{user.name}</strong>
+              <span> Last Update: {moment(user.updatedAt).format("MM/DD/YY HH:mm")} </span>
               </Link>
             </div>
           ))}
