@@ -59,6 +59,9 @@ const Detail = () => {
     return (
       <div className="Detail">
         <div className="container-fluid">
+          <Row>
+            <button><a href="https://www.amazon.com/" target="_blank">Amazon</a></button>
+          </Row>
           <Hero backgroundImage="https://www.thissimplebalance.com/wp-content/uploads/2019/10/gift-ideas-for-minimalists-840x630.jpg">
             <h1 className="text-center">Add A Gift, {user.name}!</h1>
             <h2>Treat Yourself Today</h2>

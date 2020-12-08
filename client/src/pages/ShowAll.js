@@ -28,7 +28,7 @@ const ShowAll = () => {
         <h5> Click on a user to see their wishlist</h5>
         <div className="usernameUpper">
           {users.map((user) => (
-            <div key={user._id}>
+            <div class="users-all" key={user._id}>
               <Link to={"/showall/" + user._id}>
               <AccountCircleIcon /> <strong>{user.name}</strong>
               <span> Last Update: {moment(user.updatedAt).format("MM/DD/YY HH:mm")} </span>
