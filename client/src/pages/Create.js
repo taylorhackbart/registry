@@ -41,7 +41,7 @@ const Create = () => {
         <Card.Title>Create Your Own Registry Here!</Card.Title>
         <Card.Img src="https://www.honestlymodern.com/wp-content/uploads/2020/10/Gifts-Laying-on-a-Table-1.png" />
         <Card.Body>
-          <Input onChange={handleInputChange} name="name" placeholder="Name" />
+          <Input onChange={handleInputChange} name="name" placeholder="Jane Doe" />
         </Card.Body>
         <Link
           to={"/showall/name/" + userObj.name}

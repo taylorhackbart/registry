@@ -5,7 +5,9 @@ import "./style.css";
 
 export function List({ children }) {
   return (
-    <div className="list-overflow-container" style={{minHeight: "50vh"}}>
+    <div className="list container-fluid"
+    //  style={{minHeight: "50vh"}}
+     >
       <ul className="list-group">{children}</ul>
     </div>
   );

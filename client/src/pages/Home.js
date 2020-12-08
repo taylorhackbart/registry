@@ -30,7 +30,7 @@ function Home() {
 
             <div className="card-home col-sm-3">
               <img
-                src="https://stylemotivation.com/wp-content/uploads/2020/02/elegant-vintage-inspired-outdoor-wedding-at-the-ridge-asheville-photography-anthology-38-700x1050-700x1050.jpg"
+                src="https://media-api.xogrp.com/images/b3beff64-a3ca-4286-b6af-7cb2011b212c~rs_768.h"
                 className="card-img-top"
                 alt="..."
               />
@@ -47,7 +47,7 @@ function Home() {
 
             <div className="card-home col-sm-3">
               <img
-                src="https://i.pinimg.com/736x/3e/0f/59/3e0f591bda52af0f8c456606f9c98dba.jpg"
+                src="https://i.etsystatic.com/9357868/r/il/ff61e5/2095229691/il_794xN.2095229691_2vzo.jpg"
                 className="card-img-top"
                 alt="..."
               />

@@ -21,7 +21,7 @@ const Nav = ({ setSearched }) => {
           <RedeemIcon />
         </a>
 
-        <div className="format">
+        <div className="format-nav-bar">
           <form className="form-inline">
             <Link to="/create">
               <button
