@@ -42,7 +42,7 @@ const Nav = ({ setSearched }) => {
             <Link to={"/showall/name/" + searchValue}>
               <button
                 onClick={(e) => {
-                  e.preventDefault();
+           
                   setSearched(searchValue);
                 }}
                 className="btn btn-outline-secondary my-2 my-sm-0"
