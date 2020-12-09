@@ -7,18 +7,19 @@ import { Card, Button } from "react-bootstrap";
 import "./create.css";
 
 const Create = () => {
+  //Setting initial states
   const [userName, setUserName] = useState([]);
   const [userObj, setUserObj] = useState({
     name: "",
     giftList: [],
   });
-
+  //Handling form inputs
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     console.log(name, value);
     setUserObj({ ...userObj, [name]: value });
   };
-
+  //Handling form submission
   const handleFormSubmit = (e) => {
     API.saveUser(userObj)
       .then((data) => {

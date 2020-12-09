@@ -3,21 +3,26 @@ import { useParams } from "react-router-dom";
 import { Col, Row } from "../components/Grid";
 import API from "../utils/API";
 import { List, ListItem } from "../components/List";
-// import Footer from "../components/Footer";
 import { Input, FormBtn } from "../components/Form";
 import Hero from "../components/Hero";
 import "./detail.css";
 import NoMatch from "./NoMatch";
 
 const Detail = () => {
+  // Setting state for user and form inputs
   const [user, setUser] = useState({
     name: "",
     giftList: [],
     updatedAt: ""
   });
-  const [formObject, setFormObject] = useState({});
+  // Ensuring we can clear the from inputs on submit
+  const [formObject, setFormObject] = useState({
+    title: "", 
+    image: "", 
+    link: ""
+  });
   const params = useParams();
-
+  // Getting users data by ID or name 
   useEffect(() => {
     if (params.id) {
       API.getUser(params.id)
@@ -29,28 +34,26 @@ const Detail = () => {
         .catch((err) => console.log(err));
     }
   }, [params]);
-
+  // Grabbing values from form
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setFormObject({ ...formObject, [name]: value });
   };
-
+  // Setting new state after form submission
   const handleFormSubmit = (event) => {
     event.preventDefault();
     var newArr = user.giftList;
     newArr.push(formObject);
     setUser({ ...user, giftList: newArr });
-    // setUser({...user, updatedAt: Date.now})
     API.updateUser(user._id, user)
-      .then((res) => console.log(res))
+      .then((res) => console.log(res), setFormObject({title:"", image:"", link:""}))
       .catch((err) =>{ throw err });
   };
-
+  // Deleting a gift from the array
   const delGift = (e) => {
     e.preventDefault();
     var newArr = user.giftList.filter((id) => {return e.target.id !== id._id});
-    setUser({ ...user, giftList: newArr});
-    // setUser({...user, updatedAt: Date.now})
+    setUser({ ...user, giftList: newArr });
     API.updateUser(user._id, user)
       .then((res) => console.log(res))
       .catch((err) => { throw err });
@@ -79,16 +82,19 @@ const Detail = () => {
                   onChange={handleInputChange}
                   name="title"
                   placeholder="Title"
+                  value={formObject.title}
                 />
                 <Input
                   onChange={handleInputChange}
                   name="image"
-                  placeholder="Image"
+                  placeholder="Image Link"
+                  value={formObject.image}
                 />
                 <Input
                   onChange={handleInputChange}
                   name="link"
                   placeholder="Link"
+                  value={formObject.link}
                 />
                 <FormBtn
                   disabled={!(formObject.title && formObject.link)}

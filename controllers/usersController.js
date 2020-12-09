@@ -4,6 +4,7 @@ module.exports = {
     findAll: function(req, res) {
       db.User
         .find(req.query)
+        // .find({})
         // .sort({ date: -1 })
         .then(dbModel => res.json(dbModel))
         .catch(err => res.status(422).json(err));
@@ -25,7 +26,8 @@ module.exports = {
     update: function(req, res) {
       db.User
       // This finds the User in the database depending on what parameters are available, then updates their giftList, allowing one update route for two params
-        .findOneAndUpdate({ _id: req.params.id} || {name: req.params.name}, {$set: {giftList: req.body.giftList}})
+        .findOneAndUpdate({ _id: req.params.id} || {name: req.params.name}, {$set: {giftList: req.body.giftList}}, 
+        {new:true})
         .then(dbModel => res.json(dbModel))
         .catch(err => res.status(422).json(err));
     },
