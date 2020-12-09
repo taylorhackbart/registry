@@ -11,7 +11,7 @@ function Reviews() {
     console.log(name, value);
     setFormObject({ ...formObject, [name]: value });
   }
-
+  // Handles form submission and setting new state
   function handleFormSubmit() {
     API.saveReviews(formObject)
       .then((data) => {
